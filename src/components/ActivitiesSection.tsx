@@ -1,11 +1,20 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Users, School, Sprout, Recycle, Droplets, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
+import { Card, CardContent } from '@/components/ui/card';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel';
 
 const ActivitiesSection = () => {
   const { t } = useLanguage();
+  const [activeTab, setActiveTab] = useState<'community' | 'school'>('community');
 
   const communityActivities = [
     {
@@ -85,94 +94,138 @@ const ActivitiesSection = () => {
     }
   ];
 
+  // Μοτίβο τρίδυμης εμφάνισης για desktop, διπλής για tablet και μονής για κινητά
+  const ActivitiesGrid = ({ activities }: { activities: typeof communityActivities }) => {
+    return (
+      <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {activities.map((activity, index) => (
+          <ActivityCard key={index} activity={activity} index={index} />
+        ))}
+      </div>
+    );
+  };
+
+  // Carousel για εμφάνιση σε μεγαλύτερες οθόνες - πιο εκθεσιακό στυλ
+  const ActivitiesCarousel = ({ activities }: { activities: typeof communityActivities }) => {
+    return (
+      <div className="hidden lg:block">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {activities.map((activity, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <ActivityCard activity={activity} index={index} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center mt-6 space-x-4">
+            <CarouselPrevious className="relative static left-auto translate-y-0 bg-primary text-white hover:bg-primary-light hover:text-white" />
+            <CarouselNext className="relative static right-auto translate-y-0 bg-primary text-white hover:bg-primary-light hover:text-white" />
+          </div>
+        </Carousel>
+      </div>
+    );
+  };
+
   const ActivityCard = ({ activity, index }: { activity: any; index: number }) => (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+      className="h-full"
     >
-      <div className="relative overflow-hidden">
-        <img
-          src={activity.image}
-          alt={t(activity.titleKey)}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-4 left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-          <activity.icon className="w-6 h-6 text-white" />
+      <Card className="overflow-hidden h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group">
+        <div className="relative h-52 overflow-hidden">
+          <img
+            src={activity.image}
+            alt={t(activity.titleKey)}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+            <activity.icon className="w-5 h-5 text-white" />
+          </div>
+          <h3 className="absolute bottom-4 left-4 right-4 text-white font-bold text-xl font-heading line-clamp-2">
+            {t(activity.titleKey)}
+          </h3>
         </div>
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-3">
-          {t(activity.titleKey)}
-        </h3>
-        <p className="text-gray-600 leading-relaxed">
-          {t(activity.descriptionKey)}
-        </p>
-      </div>
+        <CardContent className="p-4">
+          <p className="text-sm text-gray-600 line-clamp-4 leading-relaxed">
+            {t(activity.descriptionKey)}
+          </p>
+          <div className="mt-4 flex justify-end">
+            <span className="text-xs text-primary font-medium hover:underline cursor-pointer transition-all">
+              {t('activities.readMore')} →
+            </span>
+          </div>
+        </CardContent>
+      </Card>
     </motion.div>
+  );
+
+  // Tab buttons για εναλλαγή μεταξύ κοινοτικών και σχολικών δραστηριοτήτων
+  const TabButton = ({ type, active }: { type: 'community' | 'school'; active: boolean }) => (
+    <button
+      onClick={() => setActiveTab(type)}
+      className={`px-6 py-3 font-medium rounded-full transition-all ${
+        active 
+          ? `bg-${type === 'community' ? 'primary' : 'secondary'} text-white shadow-md`
+          : 'bg-transparent text-gray-600 hover:bg-gray-100'
+      }`}
+    >
+      {t(`activities.${type}.title`)}
+    </button>
   );
 
   return (
     <section id="activities" className="py-20 bg-white">
       <div className="container-custom section-padding">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
             {t('activities.title')}
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          
+          {/* Tabs για εναλλαγή κατηγοριών */}
+          <div className="flex justify-center space-x-4 mb-12">
+            <TabButton type="community" active={activeTab === 'community'} />
+            <TabButton type="school" active={activeTab === 'school'} />
+          </div>
         </motion.div>
 
-        {/* Community Activities */}
-        <div className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h3 className="text-2xl md:text-3xl font-heading font-semibold text-primary mb-2">
-              {t('activities.community.title')}
-            </h3>
-            <div className="w-16 h-1 bg-secondary"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {communityActivities.map((activity, index) => (
-              <ActivityCard key={index} activity={activity} index={index} />
-            ))}
-          </div>
-        </div>
-
-        {/* School Activities */}
-        <div>
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h3 className="text-2xl md:text-3xl font-heading font-semibold text-secondary mb-2">
-              {t('activities.school.title')}
-            </h3>
-            <div className="w-16 h-1 bg-accent"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {schoolActivities.map((activity, index) => (
-              <ActivityCard key={index} activity={activity} index={index} />
-            ))}
-          </div>
-        </div>
+        {/* Δυναμική εμφάνιση δραστηριοτήτων βάσει του ενεργού tab */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {activeTab === 'community' && (
+            <>
+              <ActivitiesCarousel activities={communityActivities} />
+              <ActivitiesGrid activities={communityActivities} />
+            </>
+          )}
+          
+          {activeTab === 'school' && (
+            <>
+              <ActivitiesCarousel activities={schoolActivities} />
+              <ActivitiesGrid activities={schoolActivities} />
+            </>
+          )}
+        </motion.div>
       </div>
     </section>
   );
