@@ -65,8 +65,8 @@ const Header = () => {
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center overflow-hidden shadow-lg">
               <span className="text-white font-bold text-lg">Om</span>
             </div>
-            <span className="font-heading font-semibold text-xl text-primary">
-              Om <span className="text-accent">Erresos</span>
+            <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-primary' : 'text-white'}`}>
+              Om <span className={`${scrolled ? 'text-accent' : 'text-accent-foreground'}`}>Erresos</span>
             </span>
           </motion.div>
 
@@ -77,9 +77,11 @@ const Header = () => {
                 <motion.button
                   key={item.key}
                   onClick={() => scrollToSection(item.href)}
-                  className={`text-gray-700 hover:text-primary transition-colors duration-200 font-medium relative ${
-                    scrolled ? 'py-2 px-3' : 'py-2 px-3'
-                  } rounded-md hover:bg-primary/10`}
+                  className={`transition-colors duration-200 font-medium relative ${
+                    scrolled 
+                      ? 'text-gray-700 hover:text-primary py-2 px-3' 
+                      : 'text-white hover:text-gray-200 py-2 px-3'
+                  } rounded-md ${scrolled ? 'hover:bg-primary/10' : 'hover:bg-white/10'}`}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 * index }}
@@ -87,7 +89,7 @@ const Header = () => {
                 >
                   {t(`nav.${item.key}`)}
                   <motion.span
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-left"
+                    className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? 'bg-primary' : 'bg-white'} origin-left`}
                     initial={{ scaleX: 0 }}
                     whileHover={{ scaleX: 1 }}
                     transition={{ duration: 0.2 }}
@@ -103,7 +105,11 @@ const Header = () => {
               variant="outline"
               size="sm"
               onClick={toggleLanguage}
-              className="flex items-center space-x-1 bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 shadow-sm"
+              className={`flex items-center space-x-1 ${
+                scrolled 
+                  ? 'bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 text-primary' 
+                  : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white'
+              } shadow-sm`}
             >
               <Globe className="w-4 h-4" />
               <span className="uppercase font-medium">{language}</span>
@@ -113,10 +119,14 @@ const Header = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="md:hidden p-2 bg-white/50 backdrop-blur-sm rounded-md shadow-sm border border-primary/20"
+              className={`md:hidden p-2 ${
+                scrolled 
+                  ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' 
+                  : 'bg-white/20 backdrop-blur-sm border border-white/30 text-white'
+              } rounded-md shadow-sm`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-6 h-6 text-primary" /> : <Menu className="w-6 h-6 text-primary" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </motion.button>
           </div>
         </div>
