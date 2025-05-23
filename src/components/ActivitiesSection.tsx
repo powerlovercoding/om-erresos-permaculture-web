@@ -4,17 +4,9 @@ import { Users, School, Sprout, Recycle, Droplets, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from '@/components/ui/carousel';
 
 const ActivitiesSection = () => {
   const { t } = useLanguage();
-  const [activeTab, setActiveTab] = useState<'community' | 'school'>('community');
 
   const communityActivities = [
     {
@@ -94,40 +86,12 @@ const ActivitiesSection = () => {
     }
   ];
 
-  // Μοτίβο τρίδυμης εμφάνισης για desktop, διπλής για tablet και μονής για κινητά
   const ActivitiesGrid = ({ activities }: { activities: typeof communityActivities }) => {
     return (
-      <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {activities.map((activity, index) => (
           <ActivityCard key={index} activity={activity} index={index} />
         ))}
-      </div>
-    );
-  };
-
-  // Carousel για εμφάνιση σε μεγαλύτερες οθόνες - πιο εκθεσιακό στυλ
-  const ActivitiesCarousel = ({ activities }: { activities: typeof communityActivities }) => {
-    return (
-      <div className="hidden lg:block">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {activities.map((activity, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <ActivityCard activity={activity} index={index} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="flex justify-center mt-6 space-x-4">
-            <CarouselPrevious className="relative static left-auto translate-y-0 bg-primary text-white hover:bg-primary-light hover:text-white" />
-            <CarouselNext className="relative static right-auto translate-y-0 bg-primary text-white hover:bg-primary-light hover:text-white" />
-          </div>
-        </Carousel>
       </div>
     );
   };
@@ -169,63 +133,49 @@ const ActivitiesSection = () => {
     </motion.div>
   );
 
-  // Tab buttons για εναλλαγή μεταξύ κοινοτικών και σχολικών δραστηριοτήτων
-  const TabButton = ({ type, active }: { type: 'community' | 'school'; active: boolean }) => (
-    <button
-      onClick={() => setActiveTab(type)}
-      className={`px-6 py-3 font-medium rounded-full transition-all ${
-        active 
-          ? `bg-${type === 'community' ? 'primary' : 'secondary'} text-white shadow-md`
-          : 'bg-transparent text-gray-600 hover:bg-gray-100'
-      }`}
+  const SectionTitle = ({ titleKey, isSubtitle = false }: { titleKey: string, isSubtitle?: boolean }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className={`${isSubtitle ? 'mb-8' : 'text-center mb-12'}`}
     >
-      {t(`activities.${type}.title`)}
-    </button>
+      <h2 className={`${isSubtitle ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl lg:text-5xl'} font-heading font-bold text-gray-900 mb-6`}>
+        {t(titleKey)}
+      </h2>
+      {!isSubtitle && <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>}
+    </motion.div>
   );
 
   return (
     <section id="activities" className="py-20 bg-white">
       <div className="container-custom section-padding">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
-            {t('activities.title')}
-          </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          
-          {/* Tabs για εναλλαγή κατηγοριών */}
-          <div className="flex justify-center space-x-4 mb-12">
-            <TabButton type="community" active={activeTab === 'community'} />
-            <TabButton type="school" active={activeTab === 'school'} />
-          </div>
-        </motion.div>
-
-        {/* Δυναμική εμφάνιση δραστηριοτήτων βάσει του ενεργού tab */}
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          {activeTab === 'community' && (
-            <>
-              <ActivitiesCarousel activities={communityActivities} />
-              <ActivitiesGrid activities={communityActivities} />
-            </>
-          )}
-          
-          {activeTab === 'school' && (
-            <>
-              <ActivitiesCarousel activities={schoolActivities} />
-              <ActivitiesGrid activities={schoolActivities} />
-            </>
-          )}
-        </motion.div>
+        <SectionTitle titleKey="activities.title" />
+        
+        {/* Community Activities Section */}
+        <div className="mb-20">
+          <SectionTitle titleKey="activities.community.title" isSubtitle={true} />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ActivitiesGrid activities={communityActivities} />
+          </motion.div>
+        </div>
+        
+        {/* School Activities Section */}
+        <div>
+          <SectionTitle titleKey="activities.school.title" isSubtitle={true} />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ActivitiesGrid activities={schoolActivities} />
+          </motion.div>
+        </div>
       </div>
     </section>
   );
