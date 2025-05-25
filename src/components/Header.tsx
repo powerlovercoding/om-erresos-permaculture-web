@@ -32,15 +32,23 @@ const Header = () => {
 
   const scrollToSection = (href: string) => {
     console.log('Scrolling to:', href);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    } else {
-      console.log('Element not found:', href);
-    }
+    
+    // Close menu first for mobile
     setIsMenuOpen(false);
+    
+    // Add a small delay to ensure menu is closed before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        console.log('Successfully scrolled to:', href);
+      } else {
+        console.log('Element not found:', href);
+      }
+    }, 100);
   };
 
   // Add scroll effect
@@ -137,22 +145,21 @@ const Header = () => {
               className="md:hidden border-t border-gray-200 py-4 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-lg mt-3"
             >
               {navItems.map((item, index) => (
-                <motion.button 
+                <motion.div
                   key={item.key} 
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary transition-colors duration-200 hover:bg-primary/10 cursor-pointer" 
+                  initial={{ opacity: 0, x: -10 }} 
+                  animate={{ opacity: 1, x: 0 }} 
+                  transition={{ delay: 0.1 * index, duration: 0.3 }}
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
                     console.log('Mobile nav button clicked:', item.key, item.href);
                     scrollToSection(item.href);
                   }}
-                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary transition-colors duration-200 hover:bg-primary/10 cursor-pointer" 
-                  initial={{ opacity: 0, x: -10 }} 
-                  animate={{ opacity: 1, x: 0 }} 
-                  transition={{ delay: 0.1 * index, duration: 0.3 }}
-                  type="button"
                 >
                   {t(`nav.${item.key}`)}
-                </motion.button>
+                </motion.div>
               ))}
             </motion.nav>
           )}
