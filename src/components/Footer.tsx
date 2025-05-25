@@ -55,7 +55,7 @@ const Footer = () => {
               <span className="font-heading font-semibold text-xl">Om Erresos</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Δημιουργώντας ένα βιώσιμο μέλλον για τη Λέσβο μέσω της permaculture και της περιβαλλοντικής εκπαίδευσης.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -73,21 +73,21 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Γρήγοροι Σύνδεσμοι</h4>
+            <h4 className="font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#about" className="text-gray-300 hover:text-white transition-colors">
-                  Σχετικά με εμάς
+                  {t('footer.aboutUs')}
                 </a>
               </li>
               <li>
                 <a href="#activities" className="text-gray-300 hover:text-white transition-colors">
-                  Δραστηριότητες
+                  {t('nav.activities')}
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
-                  Επικοινωνία
+                  {t('footer.contact')}
                 </a>
               </li>
             </ul>
@@ -95,9 +95,9 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-4">Επικοινωνία</h4>
+            <h4 className="font-semibold mb-4">{t('contact.title')}</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Ερεσός, Λέσβος</p>
+              <p>{t('contact.location')}, {t('contact.country')}</p>
               <p>+30 22530 53000</p>
               <p>info@omerresos.gr</p>
             </div>

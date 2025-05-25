@@ -28,11 +28,18 @@ const translations = {
     'about.title': 'Σκοπός & Περιγραφή του Προγράμματος',
     'about.description': 'Το πρόγραμμα "Νέοι για το Κλίμα στη Λέσβο" στοχεύει στην ευαισθητοποίηση και εκπαίδευση των νέων σχετικά με τις κλιματικές αλλαγές και τη βιώσιμη ανάπτυξη. Μέσω πρακτικών δραστηριοτήτων permaculture, οι συμμετέχοντες μαθαίνουν να δημιουργούν βιώσιμες λύσεις για τις περιβαλλοντικές προκλήσεις.',
     'about.mission': 'Η αποστολή μας είναι να ενδυναμώσουμε τη νεολαία με γνώσεις και εργαλεία για την αντιμετώπιση των κλιματικών προκλήσεων μέσω πρακτικών και βιώσιμων μεθόδων.',
+    'about.goal': 'Στόχος',
+    'about.goalDescription': 'Ευαισθητοποίηση νέων για το κλίμα',
+    'about.values': 'Αξίες',
+    'about.valuesDescription': 'Βιωσιμότητα και κοινοτική δράση',
+    'about.method': 'Μέθοδος',
+    'about.methodDescription': 'Πρακτική εκμάθηση permaculture',
     
     // Activities
     'activities.title': 'Δραστηριότητες του Προγράμματος',
     'activities.community.title': 'Community Δραστηριότητες',
     'activities.school.title': 'Σχολικές Δραστηριότητες',
+    'activities.readMore': 'Διαβάστε περισσότερα',
     
     // Community Activities
     'community.workshop.title': 'Εργαστήρια Permaculture',
@@ -64,16 +71,31 @@ const translations = {
     
     // Contact
     'contact.title': 'Στοιχεία Επικοινωνίας',
+    'contact.subtitle': 'Επικοινωνήστε μαζί μας για περισσότερες πληροφορίες σχετικά με το πρόγραμμα "Νέοι για το Κλίμα στη Λέσβο".',
     'contact.address': 'Διεύθυνση',
     'contact.phone': 'Τηλέφωνο',
     'contact.email': 'Email',
     'contact.website': 'Ιστοσελίδα',
+    'contact.contactInfo': 'Στοιχεία Επικοινωνίας',
+    'contact.hours': 'Ώρες Λειτουργίας',
+    'contact.monday': 'Δευτέρα - Παρασκευή',
+    'contact.saturday': 'Σάββατο',
+    'contact.sunday': 'Κυριακή',
+    'contact.closed': 'Κλειστά',
+    'contact.cta': 'Γίνετε μέρος της αλλαγής!',
+    'contact.ctaDescription': 'Επικοινωνήστε μαζί μας για να συμμετέχετε στις δράσεις permaculture.',
+    'contact.location': 'Ερεσός, Λέσβος',
+    'contact.country': 'Ελλάδα',
     
     // Footer
     'footer.partners': 'Συνεργαζόμενοι Φορείς',
     'footer.rights': 'Όλα τα δικαιώματα διατηρούνται',
     'footer.privacy': 'Πολιτική Απορρήτου',
-    'footer.terms': 'Όροι Χρήσης'
+    'footer.terms': 'Όροι Χρήσης',
+    'footer.description': 'Δημιουργώντας ένα βιώσιμο μέλλον για τη Λέσβο μέσω της permaculture και της περιβαλλοντικής εκπαίδευσης.',
+    'footer.quickLinks': 'Γρήγοροι Σύνδεσμοι',
+    'footer.aboutUs': 'Σχετικά με εμάς',
+    'footer.contact': 'Επικοινωνία'
   },
   en: {
     // Header
@@ -91,11 +113,18 @@ const translations = {
     'about.title': 'Program Purpose & Description',
     'about.description': 'The "Youth for Climate in Lesvos" program aims to raise awareness and educate young people about climate change and sustainable development. Through practical permaculture activities, participants learn to create sustainable solutions for environmental challenges.',
     'about.mission': 'Our mission is to empower youth with knowledge and tools to address climate challenges through practical and sustainable methods.',
+    'about.goal': 'Goal',
+    'about.goalDescription': 'Climate awareness for youth',
+    'about.values': 'Values',
+    'about.valuesDescription': 'Sustainability and community action',
+    'about.method': 'Method',
+    'about.methodDescription': 'Practical permaculture learning',
     
     // Activities
     'activities.title': 'Program Activities',
     'activities.community.title': 'Community Activities',
     'activities.school.title': 'School Activities',
+    'activities.readMore': 'Read more',
     
     // Community Activities
     'community.workshop.title': 'Permaculture Workshops',
@@ -127,16 +156,31 @@ const translations = {
     
     // Contact
     'contact.title': 'Contact Information',
+    'contact.subtitle': 'Contact us for more information about the "Youth for Climate in Lesvos" program.',
     'contact.address': 'Address',
     'contact.phone': 'Phone',
     'contact.email': 'Email', 
     'contact.website': 'Website',
+    'contact.contactInfo': 'Contact Information',
+    'contact.hours': 'Operating Hours',
+    'contact.monday': 'Monday - Friday',
+    'contact.saturday': 'Saturday',
+    'contact.sunday': 'Sunday',
+    'contact.closed': 'Closed',
+    'contact.cta': 'Be part of the change!',
+    'contact.ctaDescription': 'Contact us to participate in permaculture activities.',
+    'contact.location': 'Eresos, Lesvos',
+    'contact.country': 'Greece',
     
     // Footer
     'footer.partners': 'Partner Organizations',
     'footer.rights': 'All rights reserved',
     'footer.privacy': 'Privacy Policy',
-    'footer.terms': 'Terms of Service'
+    'footer.terms': 'Terms of Service',
+    'footer.description': 'Creating a sustainable future for Lesvos through permaculture and environmental education.',
+    'footer.quickLinks': 'Quick Links',
+    'footer.aboutUs': 'About Us',
+    'footer.contact': 'Contact'
   }
 };
 

@@ -10,18 +10,18 @@ const AboutSection = () => {
   const features = [
     {
       icon: Target,
-      title: 'Στόχος',
-      description: 'Ευαισθητοποίηση νέων για το κλίμα'
+      title: t('about.goal'),
+      description: t('about.goalDescription')
     },
     {
       icon: Heart,
-      title: 'Αξίες',
-      description: 'Βιωσιμότητα και κοινοτική δράση'
+      title: t('about.values'),
+      description: t('about.valuesDescription')
     },
     {
       icon: Lightbulb,
-      title: 'Μέθοδος',
-      description: 'Πρακτική εκμάθηση permaculture'
+      title: t('about.method'),
+      description: t('about.methodDescription')
     }
   ];
 

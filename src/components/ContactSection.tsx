@@ -11,7 +11,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       label: t('contact.address'),
-      value: 'Ερεσός, Λέσβος 81105, Ελλάδα',
+      value: `${t('contact.location')}, 81105, ${t('contact.country')}`,
       link: 'https://maps.google.com'
     },
     {
@@ -49,7 +49,7 @@ const ContactSection = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Επικοινωνήστε μαζί μας για περισσότερες πληροφορίες σχετικά με το πρόγραμμα "Νέοι για το Κλίμα στη Λέσβο".
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ const ContactSection = () => {
           >
             <div>
               <h3 className="text-2xl font-heading font-semibold text-gray-900 mb-6">
-                Στοιχεία Επικοινωνίας
+                {t('contact.contactInfo')}
               </h3>
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
@@ -105,20 +105,20 @@ const ContactSection = () => {
             >
               <div className="flex items-center space-x-3 mb-4">
                 <Clock className="w-6 h-6 text-primary" />
-                <h4 className="font-semibold text-gray-900">Ώρες Λειτουργίας</h4>
+                <h4 className="font-semibold text-gray-900">{t('contact.hours')}</h4>
               </div>
               <div className="space-y-2 text-gray-600">
                 <div className="flex justify-between">
-                  <span>Δευτέρα - Παρασκευή</span>
+                  <span>{t('contact.monday')}</span>
                   <span>09:00 - 17:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Σάββατο</span>
+                  <span>{t('contact.saturday')}</span>
                   <span>10:00 - 14:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Κυριακή</span>
-                  <span>Κλειστά</span>
+                  <span>{t('contact.sunday')}</span>
+                  <span>{t('contact.closed')}</span>
                 </div>
               </div>
             </motion.div>
@@ -141,8 +141,8 @@ const ContactSection = () => {
               <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
                 <div className="text-center text-white">
                   <MapPin className="w-12 h-12 mx-auto mb-2" />
-                  <p className="text-lg font-semibold">Ερεσός, Λέσβος</p>
-                  <p className="text-sm">Ελλάδα</p>
+                  <p className="text-lg font-semibold">{t('contact.location')}</p>
+                  <p className="text-sm">{t('contact.country')}</p>
                 </div>
               </div>
             </div>
@@ -156,10 +156,10 @@ const ContactSection = () => {
               className="absolute -bottom-6 left-6 right-6 bg-white p-6 rounded-lg shadow-lg"
             >
               <h4 className="font-semibold text-gray-900 mb-2">
-                Γίνετε μέρος της αλλαγής!
+                {t('contact.cta')}
               </h4>
               <p className="text-sm text-gray-600">
-                Επικοινωνήστε μαζί μας για να συμμετέχετε στις δράσεις permaculture.
+                {t('contact.ctaDescription')}
               </p>
             </motion.div>
           </motion.div>
