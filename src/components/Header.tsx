@@ -31,11 +31,14 @@ const Header = () => {
   }];
 
   const scrollToSection = (href: string) => {
+    console.log('Scrolling to:', href);
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth'
       });
+    } else {
+      console.log('Element not found:', href);
     }
     setIsMenuOpen(false);
   };
@@ -113,7 +116,10 @@ const Header = () => {
               whileHover={{ scale: 1.05 }} 
               whileTap={{ scale: 0.95 }} 
               className={`md:hidden p-2 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-white'} rounded-md shadow-sm`} 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                console.log('Mobile menu button clicked, current state:', isMenuOpen);
+                setIsMenuOpen(!isMenuOpen);
+              }}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </motion.button>
@@ -133,11 +139,17 @@ const Header = () => {
               {navItems.map((item, index) => (
                 <motion.button 
                   key={item.key} 
-                  onClick={() => scrollToSection(item.href)} 
-                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary transition-colors duration-200 hover:bg-primary/10" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Mobile nav button clicked:', item.key, item.href);
+                    scrollToSection(item.href);
+                  }}
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary transition-colors duration-200 hover:bg-primary/10 cursor-pointer" 
                   initial={{ opacity: 0, x: -10 }} 
                   animate={{ opacity: 1, x: 0 }} 
                   transition={{ delay: 0.1 * index, duration: 0.3 }}
+                  type="button"
                 >
                   {t(`nav.${item.key}`)}
                 </motion.button>
