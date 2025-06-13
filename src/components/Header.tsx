@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavigationMenu, NavigationMenuList } from '@/components/ui/navigation-menu';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -61,22 +60,20 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container-custom section-padding">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center space-x-3"
-          >
-            <img
-              src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png"
-              alt="Om Erresos Logo"
-              className="h-6 w-auto"
-            />
+          <motion.div initial={{
+          opacity: 0,
+          x: -20
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.5
+        }} className="flex items-center space-x-3">
+            <img src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" alt="Om Erresos Logo" className="h-9 w-auto" />
             <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>
               ERESSOS
             </span>
@@ -165,8 +162,6 @@ const Header = () => {
             </motion.nav>}
         </AnimatePresence>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
