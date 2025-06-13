@@ -75,7 +75,7 @@ const Header = () => {
             <img
               src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png"
               alt="Om Erresos Logo"
-              className="h-12 w-auto"
+              className="h-6 w-auto"
             />
             <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>
               ERESSOS
