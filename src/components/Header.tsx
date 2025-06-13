@@ -73,7 +73,7 @@ const Header = () => {
         }} transition={{
           duration: 0.5
         }} className="flex items-center space-x-3">
-            <img alt="Om Erresos Logo" className="h-12 w-auto" src="/lovable-uploads/c511f433-02e8-417d-90f6-cc80d1e75b65.png" />
+            <img alt="Om Erresos Logo" className="h-12 w-auto" src="/lovable-uploads/1bf44de1-e3b0-4cb9-9923-532188064875.png" />
             <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>ERESSOS</span>
           </motion.div>
 
