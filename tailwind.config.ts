@@ -116,8 +116,13 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out'
 			},
 			fontFamily: {
-				sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
 				heading: ['Playfair Display', 'serif']
+			},
+			fontWeight: {
+				light: '300',
+				normal: '400',
+				semibold: '600'
 			}
 		}
 	},
