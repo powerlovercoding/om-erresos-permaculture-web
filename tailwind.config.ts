@@ -1,4 +1,5 @@
 
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -117,7 +118,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				heading: ['Playfair Display', 'serif']
+				heading: ['Inter', 'system-ui', 'sans-serif']
 			},
 			fontWeight: {
 				light: '300',
@@ -128,3 +129,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
