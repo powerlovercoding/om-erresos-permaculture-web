@@ -111,4 +111,8 @@
   .gradient-bg {
     background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 50%, #2e8b57 100%);
   }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #ecfdf5 100%);
+  }
 }

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChevronDown, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -16,14 +15,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 text-white relative overflow-hidden" style={{
+    <section className="min-h-screen flex items-center justify-center pt-16 hero-gradient text-white relative overflow-hidden" style={{
       background: 'linear-gradient(135deg, #86efac 0%, #a7f3d0 50%, #bbf7d0 100%)'
     }}>
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-32 h-32 border border-white/30 rounded-full"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-white/30 rounded-full"></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-white/30 rounded-full"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 border border-gray-300/30 rounded-full"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 border border-gray-300/30 rounded-full"></div>
+        <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
       </div>
 
       <div className="container-custom section-padding relative z-10">
@@ -35,7 +34,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="flex items-center space-x-2 text-green-700">
+            <div className="flex items-center space-x-2 text-nature-leaf">
               <Leaf className="w-6 h-6" />
               <span className="text-sm font-medium uppercase tracking-wider">
                 Permaculture Project

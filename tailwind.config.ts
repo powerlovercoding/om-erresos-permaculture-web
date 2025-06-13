@@ -45,7 +45,10 @@ export default {
 					green: '#34d399',
 					earth: '#92400e',
 					sky: '#0ea5e9',
-					leaf: '#65a30d'
+					leaf: '#65a30d',
+					'light-green': '#f0fdf4',
+					'soft-green': '#dcfce7',
+					'mint': '#ecfdf5'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
