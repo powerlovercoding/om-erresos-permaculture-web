@@ -116,7 +116,7 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
 				heading: ['Playfair Display', 'serif']
 			}
 		}
