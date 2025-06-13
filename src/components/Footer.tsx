@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -49,9 +48,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">Om</span>
-              </div>
+              <img 
+                src="/lovable-uploads/2b688e0d-6772-4475-9285-d76072b092ae.png" 
+                alt="Om Erresos Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="font-heading font-semibold text-xl">Om Erresos</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
