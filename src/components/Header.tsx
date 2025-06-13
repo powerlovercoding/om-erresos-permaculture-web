@@ -75,11 +75,16 @@ const Header = () => {
             initial={{ opacity: 0, x: -20 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.5 }} 
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center overflow-hidden shadow-lg">
-              <span className="text-white font-bold text-lg">Om</span>
-            </div>
+            <img 
+              src="/lovable-uploads/f1699227-41e4-428d-a919-445c32dce10c.png" 
+              alt="Om Erresos Logo" 
+              className="h-12 w-auto"
+            />
+            <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+              Om Erresos
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
