@@ -1,26 +1,41 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-
 const Footer = () => {
-  const { t } = useLanguage();
-
-  const partnerLogos = [
-    { name: 'EU', logo: 'EU' },
-    { name: 'Ministry', logo: 'MIN' },
-    { name: 'University', logo: 'UNI' },
-    { name: 'NGO', logo: 'NGO' }
-  ];
-
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:info@omerresos.gr', label: 'Email' }
-  ];
-
-  return (
-    <footer className="bg-gray-900 text-white">
+  const {
+    t
+  } = useLanguage();
+  const partnerLogos = [{
+    name: 'EU',
+    logo: 'EU'
+  }, {
+    name: 'Ministry',
+    logo: 'MIN'
+  }, {
+    name: 'University',
+    logo: 'UNI'
+  }, {
+    name: 'NGO',
+    logo: 'NGO'
+  }];
+  const socialLinks = [{
+    icon: Facebook,
+    href: '#',
+    label: 'Facebook'
+  }, {
+    icon: Instagram,
+    href: '#',
+    label: 'Instagram'
+  }, {
+    icon: Twitter,
+    href: '#',
+    label: 'Twitter'
+  }, {
+    icon: Mail,
+    href: 'mailto:info@omerresos.gr',
+    label: 'Email'
+  }];
+  return <footer className="bg-gray-900 text-white">
       {/* Partners Section */}
       <div className="border-b border-gray-800">
         <div className="container-custom section-padding py-12">
@@ -28,16 +43,11 @@ const Footer = () => {
             {t('footer.partners')}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {partnerLogos.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-              >
+            {partnerLogos.map((partner, index) => <div key={index} className="flex items-center justify-center p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
                 <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">{partner.logo}</span>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
@@ -48,27 +58,16 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/lovable-uploads/2b688e0d-6772-4475-9285-d76072b092ae.png" 
-                alt="Om Erresos Logo" 
-                className="w-10 h-10 object-contain"
-              />
-              <span className="font-heading font-semibold text-xl">Om Erresos</span>
+              <img src="/lovable-uploads/2b688e0d-6772-4475-9285-d76072b092ae.png" alt="Om Erresos Logo" className="w-10 h-10 object-contain" />
+              <span className="font-heading font-semibold text-xl">ERESSOS</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-                  aria-label={social.label}
-                >
+              {socialLinks.map((social, index) => <a key={index} href={social.href} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors" aria-label={social.label}>
                   <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
 
@@ -124,8 +123,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
