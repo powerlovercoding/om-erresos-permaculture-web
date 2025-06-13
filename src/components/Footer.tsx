@@ -58,7 +58,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/lovable-uploads/2b688e0d-6772-4475-9285-d76072b092ae.png" alt="Om Erresos Logo" className="w-10 h-10 object-contain" />
+              <img alt="Om Erresos Logo" className="w-10 h-10 object-contain" src="/lovable-uploads/791924a5-491b-4fb2-9044-8501763c4d45.png" />
               <span className="font-heading font-semibold text-xl">ERESSOS</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
