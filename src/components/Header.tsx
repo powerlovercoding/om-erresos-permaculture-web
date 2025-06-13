@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavigationMenu, NavigationMenuList } from '@/components/ui/navigation-menu';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -74,12 +73,9 @@ const Header = () => {
         }} transition={{
           duration: 0.5
         }} className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
-              alt="Om Erresos Logo" 
-              className="h-6 w-auto drop-shadow-lg" 
-              style={{ filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))' }}
-            />
+            <img src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" alt="Om Erresos Logo" style={{
+            filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))'
+          }} className="h-10 w-auto drop-shadow-lg" />
             <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>
               ERESSOS
             </span>
@@ -170,5 +166,4 @@ const Header = () => {
       </div>
     </header>;
 };
-
 export default Header;
