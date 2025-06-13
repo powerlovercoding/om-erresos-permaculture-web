@@ -15,9 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 hero-gradient text-white relative overflow-hidden" style={{
-      background: 'linear-gradient(135deg, #86efac 0%, #a7f3d0 50%, #bbf7d0 100%)'
-    }}>
+    <section className="min-h-screen flex items-center justify-center pt-16 hero-gradient text-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-32 h-32 border border-gray-300/30 rounded-full"></div>
