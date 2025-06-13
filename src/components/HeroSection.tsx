@@ -16,12 +16,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 gradient-bg text-white relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center pt-16 text-white relative overflow-hidden" style={{
+      background: 'linear-gradient(135deg, #86efac 0%, #a7f3d0 50%, #bbf7d0 100%)'
+    }}>
       {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-white/20 rounded-full"></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-32 h-32 border border-white/30 rounded-full"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 border border-white/30 rounded-full"></div>
+        <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-white/30 rounded-full"></div>
       </div>
 
       <div className="container-custom section-padding relative z-10">
@@ -33,22 +35,22 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="flex items-center space-x-2 text-nature-green">
+            <div className="flex items-center space-x-2 text-green-700">
               <Leaf className="w-6 h-6" />
               <span className="text-sm font-medium uppercase tracking-wider">
                 Permaculture Project
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-gray-800">
               {t('hero.title')}
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-green-100 font-medium">
+            <h2 className="text-xl md:text-2xl text-gray-700 font-medium">
               {t('hero.subtitle')}
             </h2>
 
-            <p className="text-lg text-green-50 leading-relaxed max-w-2xl">
+            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
               {t('hero.description')}
             </p>
 
@@ -56,7 +58,7 @@ const HeroSection = () => {
               <Button
                 onClick={scrollToAbout}
                 size="lg"
-                className="bg-white text-primary hover:bg-green-50 px-8 py-3 text-lg font-semibold"
+                className="bg-primary text-white hover:bg-primary/90 px-8 py-3 text-lg font-semibold"
               >
                 {t('hero.cta')}
               </Button>
@@ -103,7 +105,7 @@ const HeroSection = () => {
         >
           <button
             onClick={scrollToAbout}
-            className="flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-colors"
+            className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-800 transition-colors"
           >
             <span className="text-sm">Scroll down</span>
             <ChevronDown className="w-6 h-6 animate-bounce" />
