@@ -41,10 +41,10 @@ const HeroSection = () => {
             duration: 0.8
           }} 
           className="space-y-6">
-            <div className="flex items-center space-x-2 text-nature-leaf">
+            <div className="flex items-center space-x-2 text-nature-leaf mt-8 md:mt-0">
               <Leaf className="w-6 h-6" />
               <span className="text-sm font-medium uppercase tracking-wider">
-                Permaculture Project
+                PROJECT
               </span>
             </div>
 
