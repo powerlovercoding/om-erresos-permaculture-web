@@ -25,7 +25,7 @@ const translations = {
     
     // About
     'about.title': 'Σκοπός & Περιγραφή του Προγράμματος',
-    'about.description': 'Το πρόγραμμα "Νέοι για το Κλίμα στη Λέσβο" στοχεύει στην ευαισθητοποίηση και εκπαίδευση των νέων σχετικά με τις κλιματικές αλλαγές και τη βιώσιμη ανάπτυξη. Μέσω πρακτικών δραστηριοτήτων permaculture, οι συμμετέχοντες μαθαίνουν να δημιουργούν βιώσιμες λύσεις για τις περιβαλλοντικές προκλήσεις.',
+    'about.description': 'Μέσα από βιωματικά εργαστήρια, εκπαιδευτικές επισκέψεις και δημιουργικές δράσεις, καλλιεργούμε την οικολογική συνείδηση και ενδυναμώνουμε τους νέους της Λέσβου ως φορείς αλλαγής. Τους δίνουμε τα εργαλεία να εκφραστούν, να συνεργαστούν και να δημιουργήσουν ένα πιο ανθεκτικό και συνειδητοποιημένο μέλλον.',
     'about.mission': 'Η αποστολή μας είναι να ενδυναμώσουμε τη νεολαία με γνώσεις και εργαλεία για την αντιμετώπιση των κλιματικών προκλήσεων μέσω πρακτικών και βιώσιμων μεθόδων.',
     'about.goal': 'Στόχος',
     'about.goalDescription': 'Ευαισθητοποίηση νέων για το κλίμα',
@@ -106,7 +106,7 @@ const translations = {
     
     // About
     'about.title': 'Program Purpose & Description',
-    'about.description': 'The "Youth for Climate in Lesvos" program aims to raise awareness and educate young people about climate change and sustainable development. Through practical permaculture activities, participants learn to create sustainable solutions for environmental challenges.',
+    'about.description': 'Through experiential workshops, educational visits and creative actions, we cultivate ecological awareness and empower the youth of Lesvos as agents of change. We give them the tools to express themselves, collaborate and create a more resilient and conscious future.',
     'about.mission': 'Our mission is to empower youth with knowledge and tools to address climate challenges through practical and sustainable methods.',
     'about.goal': 'Goal',
     'about.goalDescription': 'Climate awareness for youth',
