@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -62,7 +61,7 @@ const ActivitiesSection = () => {
     },
     {
       icon: Zap,
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/39f20215-b8f5-4a37-a2e7-67a054d9834a.png",
       titleKey: 'school.sustainability.title',
       descriptionKey: 'school.sustainability.description'
     },
