@@ -20,7 +20,7 @@ const translations = {
     
     // Hero
     'hero.title': 'Νέοι για το Κλίμα στη Λέσβο',
-    'hero.subtitle': 'Δημιουργώντας ένα βιώσιμο μέλλον μέσω της Permaculture',
+    'hero.subtitle':  'Δημιουργώντας ένα βιώσιμο μέλλον μέσω της Permaculture',
     'hero.description': 'Ανακαλύψτε πώς η permaculture μπορεί να μεταμορφώσει τις κοινότητές μας και να προστατεύσει το περιβάλλον για τις επόμενες γενιές.',
     'hero.cta': 'Μάθετε Περισσότερα',
     
@@ -41,19 +41,19 @@ const translations = {
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
     
-    // Community Activities
-    'community.workshop.title': 'Εργαστήρια Permaculture',
-    'community.workshop.description': 'Πρακτικά εργαστήρια για την εκμάθηση τεχνικών permaculture και βιώσιμης καλλιέργειας.',
-    'community.garden.title': 'Κοινοτικοί Κήποι',
-    'community.garden.description': 'Δημιουργία και συντήρηση κοινοτικών κήπων με αρχές permaculture.',
-    'community.compost.title': 'Κομποστοποίηση',
-    'community.compost.description': 'Μάθετε να μετατρέπετε τα οργανικά απόβλητα σε πολύτιμο λίπασμα.',
-    'community.water.title': 'Διαχείριση Νερού',
-    'community.water.description': 'Τεχνικές συλλογής και εξοικονόμησης νερού για βιώσιμη καλλιέργεια.',
-    'community.seeds.title': 'Τράπεζα Σπόρων',
-    'community.seeds.description': 'Συλλογή και διατήρηση παραδοσιακών ποικιλιών σπόρων.',
-    'community.energy.title': 'Ανανεώσιμη Ενέργεια',
-    'community.energy.description': 'Εργαστήρια για την κατασκευή και χρήση ανανεώσιμων πηγών ενέργειας.',
+    // Community Activities - Updated names
+    'community.workshop.title': 'Εισαγωγή στις Πολιτιστικές Πτυχές',
+    'community.workshop.description': 'Εξερεύνηση των πολιτιστικών παραδόσεων και της σχέσης τους με το περιβάλλον.',
+    'community.garden.title': 'Καλλιτεχνική Παρέμβαση στην Παραλία',
+    'community.garden.description': 'Δημιουργικές δραστηριότητες τέχνης που αναδεικνύουν την περιβαλλοντική ευαισθητοποίηση.',
+    'community.compost.title': 'Κοινοτικός Κήπος',
+    'community.compost.description': 'Δημιουργία και συντήρηση κοινοτικών κήπων με αρχές permaculture.',
+    'community.water.title': 'Ερωτηματολόγιο και Συλλογή Απορριμμάτων',
+    'community.water.description': 'Έρευνα και πρακτική δράση για την καθαριότητα του περιβάλλοντος.',
+    'community.seeds.title': 'Εργαστήριο Permaculture',
+    'community.seeds.description': 'Πρακτικά εργαστήρια για την εκμάθηση τεχνικών permaculture και βιώσιμης καλλιέργειας.',
+    'community.energy.title': 'Εργαστήριο Βοτάνων',
+    'community.energy.description': 'Μάθετε για τα τοπικά βότανα και τις θεραπευτικές τους ιδιότητες.',
     
     // School Activities
     'school.education.title': 'Περιβαλλοντική Εκπαίδευση',
@@ -126,19 +126,19 @@ const translations = {
     'activities.school.title': 'School Activities',
     'activities.readMore': 'Read more',
     
-    // Community Activities
-    'community.workshop.title': 'Permaculture Workshops',
-    'community.workshop.description': 'Practical workshops for learning permaculture techniques and sustainable cultivation.',
-    'community.garden.title': 'Community Gardens',
-    'community.garden.description': 'Creating and maintaining community gardens with permaculture principles.',
-    'community.compost.title': 'Composting',
-    'community.compost.description': 'Learn to transform organic waste into valuable fertilizer.',
-    'community.water.title': 'Water Management',
-    'community.water.description': 'Water collection and conservation techniques for sustainable cultivation.',
-    'community.seeds.title': 'Seed Bank',
-    'community.seeds.description': 'Collection and preservation of traditional seed varieties.',
-    'community.energy.title': 'Renewable Energy',
-    'community.energy.description': 'Workshops for building and using renewable energy sources.',
+    // Community Activities - Updated with correct names
+    'community.workshop.title': 'Introduction to Cultural Aspects',
+    'community.workshop.description': 'Exploring cultural traditions and their relationship with the environment.',
+    'community.garden.title': 'Art Intervention on the Beach',
+    'community.garden.description': 'Creative art activities that highlight environmental awareness.',
+    'community.compost.title': 'Communal Garden',
+    'community.compost.description': 'Creating and maintaining community gardens with permaculture principles.',
+    'community.water.title': 'Questionnaire and Waste Collection',
+    'community.water.description': 'Research and practical action for environmental cleanliness.',
+    'community.seeds.title': 'Permaculture Workshop',
+    'community.seeds.description': 'Practical workshops for learning permaculture techniques and sustainable cultivation.',
+    'community.energy.title': 'Herb Workshop',
+    'community.energy.description': 'Learn about local herbs and their therapeutic properties.',
     
     // School Activities
     'school.education.title': 'Environmental Education',
