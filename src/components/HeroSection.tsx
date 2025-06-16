@@ -67,7 +67,7 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Hero Images */}
+          {/* Hero Image */}
           <motion.div 
             initial={{
             opacity: 0,
@@ -82,14 +82,8 @@ const HeroSection = () => {
             delay: 0.2
           }} 
           className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop" alt="Permaculture garden" className="w-full h-48 object-cover rounded-lg shadow-lg" />
-                <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=200&fit=crop" alt="Sustainable farming" className="w-full h-32 object-cover rounded-lg shadow-lg" />
-              </div>
-              <div className="pt-8">
-                <img src="https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=400&h=400&fit=crop" alt="Community gardening" className="w-full h-64 object-cover rounded-lg shadow-lg" />
-              </div>
+            <div className="w-full">
+              <img src="https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=600&h=600&fit=crop" alt="People relaxing on the beach" className="w-full h-96 object-cover rounded-lg shadow-lg" />
             </div>
           </motion.div>
         </div>
