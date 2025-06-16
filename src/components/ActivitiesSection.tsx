@@ -38,7 +38,7 @@ const ActivitiesSection = () => {
     },
     {
       icon: Recycle,
-      image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/96546591-423c-4455-b2a2-acf2379584a7.png",
       titleKey: 'school.garden.title',
       descriptionKey: 'school.garden.description'
     },
