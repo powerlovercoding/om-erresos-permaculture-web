@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ChevronDown, Leaf } from 'lucide-react';
+import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
@@ -93,31 +94,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator - repositioned to bottom center */}
-      <motion.div 
-        initial={{
-        opacity: 0,
-        y: 20
-      }} 
-        animate={{
-        opacity: 1,
-        y: 0
-      }} 
-        transition={{
-        duration: 0.8,
-        delay: 1
-      }} 
-        className="pb-8"
-      >
-        <button 
-          onClick={scrollToAbout} 
-          className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-800 transition-colors"
-        >
-          <span className="text-sm">Scroll down</span>
-          <ChevronDown className="w-6 h-6 animate-bounce" />
-        </button>
-      </motion.div>
     </section>;
 };
 export default HeroSection;
