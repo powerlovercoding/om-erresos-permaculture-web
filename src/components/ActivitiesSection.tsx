@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Users, School, Sprout, Recycle, Droplets, Zap } from 'lucide-react';
+import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -55,13 +54,13 @@ const ActivitiesSection = () => {
       descriptionKey: 'school.education.description'
     },
     {
-      icon: Sprout,
+      icon: Recycle,
       image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=300&fit=crop",
       titleKey: 'school.garden.title',
       descriptionKey: 'school.garden.description'
     },
     {
-      icon: Recycle,
+      icon: Droplets,
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop",
       titleKey: 'school.recycling.title',
       descriptionKey: 'school.recycling.description'
@@ -83,6 +82,12 @@ const ActivitiesSection = () => {
       image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=300&fit=crop",
       titleKey: 'school.sustainability.title',
       descriptionKey: 'school.sustainability.description'
+    },
+    {
+      icon: Shirt,
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      titleKey: 'school.upcycling.title',
+      descriptionKey: 'school.upcycling.description'
     }
   ];
 

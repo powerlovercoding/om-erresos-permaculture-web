@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'el' | 'en';
@@ -55,19 +54,21 @@ const translations = {
     'community.energy.title': 'Εργαστήριο Βοτάνων',
     'community.energy.description': 'Μάθετε για τα τοπικά βότανα και τις θεραπευτικές τους ιδιότητες.',
     
-    // School Activities
-    'school.education.title': 'Περιβαλλοντική Εκπαίδευση',
+    // School Activities - Updated with correct Greek names
+    'school.education.title': 'Πράσινο Σχολείο',
     'school.education.description': 'Διαδραστικά μαθήματα για την κατανόηση των κλιματικών αλλαγών.',
-    'school.garden.title': 'Σχολικοί Κήποι',
-    'school.garden.description': 'Δημιουργία κήπων στα σχολεία με αρχές permaculture.',
-    'school.recycling.title': 'Ανακύκλωση & Upcycling',
-    'school.recycling.description': 'Μαθαίνοντας να επαναχρησιμοποιούμε και να ανακυκλώνουμε υλικά.',
-    'school.climate.title': 'Κλιματικές Αλλαγές',
-    'school.climate.description': 'Κατανόηση των αιτιών και επιπτώσεων των κλιματικών αλλαγών.',
-    'school.biodiversity.title': 'Βιοποικιλότητα',
-    'school.biodiversity.description': 'Εξερεύνηση της τοπικής βιοποικιλότητας και της προστασίας της.',
-    'school.sustainability.title': 'Βιωσιμότητα',
-    'school.sustainability.description': 'Πρακτικές για έναν βιώσιμο τρόπο ζωής στο σχολείο και το σπίτι.',
+    'school.garden.title': 'Ανακύκλωση Πλαστικών',
+    'school.garden.description': 'Μαθαίνοντας να ανακυκλώνουμε πλαστικά υλικά αποτελεσματικά.',
+    'school.recycling.title': 'Ανακύκλωση Νερού και Επεξεργασία Λυμάτων',
+    'school.recycling.description': 'Κατανόηση των συστημάτων διαχείρισης νερού και λυμάτων.',
+    'school.climate.title': 'Οι Μέλισσες και οι Επικονιαστές',
+    'school.climate.description': 'Εξερεύνηση του ρόλου των μελισσών στο οικοσύστημα.',
+    'school.biodiversity.title': 'Τοπικές Ποικιλίες και Σπόροι',
+    'school.biodiversity.description': 'Γνωριμία με τις τοπικές ποικιλίες φυτών και τη διατήρηση σπόρων.',
+    'school.sustainability.title': 'Θεατρικό Εργαστήρι για Παιδιά',
+    'school.sustainability.description': 'Δημιουργική έκφραση μέσω θεάτρου για περιβαλλοντικά θέματα.',
+    'school.upcycling.title': 'Δημιουργικό Upcycling Ρούχων',
+    'school.upcycling.description': 'Μετατροπή παλαιών ρούχων σε νέα δημιουργικά κομμάτια.',
     
     // Contact
     'contact.title': 'Στοιχεία Επικοινωνίας',
@@ -126,7 +127,7 @@ const translations = {
     'activities.school.title': 'School Activities',
     'activities.readMore': 'Read more',
     
-    // Community Activities - Updated with correct names
+    // Community Activities - Updated with correct Greek names
     'community.workshop.title': 'Introduction to Cultural Aspects',
     'community.workshop.description': 'Exploring cultural traditions and their relationship with the environment.',
     'community.garden.title': 'Art Intervention on the Beach',
@@ -140,19 +141,21 @@ const translations = {
     'community.energy.title': 'Herb Workshop',
     'community.energy.description': 'Learn about local herbs and their therapeutic properties.',
     
-    // School Activities
-    'school.education.title': 'Environmental Education',
+    // School Activities - English translations
+    'school.education.title': 'Green School',
     'school.education.description': 'Interactive lessons for understanding climate change.',
-    'school.garden.title': 'School Gardens',
-    'school.garden.description': 'Creating gardens in schools with permaculture principles.',
-    'school.recycling.title': 'Recycling & Upcycling',
-    'school.recycling.description': 'Learning to reuse and recycle materials.',
-    'school.climate.title': 'Climate Change',
-    'school.climate.description': 'Understanding the causes and effects of climate change.',
-    'school.biodiversity.title': 'Biodiversity',
-    'school.biodiversity.description': 'Exploring local biodiversity and its protection.',
-    'school.sustainability.title': 'Sustainability',
-    'school.sustainability.description': 'Practices for a sustainable lifestyle at school and home.',
+    'school.garden.title': 'Plastic Recycling',
+    'school.garden.description': 'Learning to effectively recycle plastic materials.',
+    'school.recycling.title': 'Water Recycling and Wastewater Treatment',
+    'school.recycling.description': 'Understanding water and wastewater management systems.',
+    'school.climate.title': 'Bees and Pollinators',
+    'school.climate.description': 'Exploring the role of bees in the ecosystem.',
+    'school.biodiversity.title': 'Local Varieties and Seeds',
+    'school.biodiversity.description': 'Getting to know local plant varieties and seed preservation.',
+    'school.sustainability.title': 'Theatre Workshop for Children',
+    'school.sustainability.description': 'Creative expression through theatre for environmental topics.',
+    'school.upcycling.title': 'Creative Clothing Upcycling',
+    'school.upcycling.description': 'Transforming old clothes into new creative pieces.',
     
     // Contact
     'contact.title': 'Contact Information',
