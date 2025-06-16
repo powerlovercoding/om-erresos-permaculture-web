@@ -76,7 +76,7 @@ const ActivitiesSection = () => {
 
   const ActivitiesGrid = ({ activities }: { activities: typeof communityActivities }) => {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {activities.map((activity, index) => (
           <ActivityCard key={index} activity={activity} index={index} />
         ))}
@@ -93,7 +93,7 @@ const ActivitiesSection = () => {
       className="h-full"
     >
       <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-56 overflow-hidden">
           <img
             src={activity.image}
             alt={t(activity.titleKey)}
