@@ -25,12 +25,6 @@ const ContactSection = () => {
       label: t('contact.email'),
       value: 'info@omerresos.gr',
       link: 'mailto:info@omerresos.gr'
-    },
-    {
-      icon: Globe,
-      label: t('contact.website'),
-      value: 'www.omerresos.gr',
-      link: 'https://www.omerresos.gr'
     }
   ];
 
@@ -94,34 +88,6 @@ const ContactSection = () => {
                 ))}
               </div>
             </div>
-
-            {/* Hours */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-sm"
-            >
-              <div className="flex items-center space-x-3 mb-4">
-                <Clock className="w-6 h-6 text-primary" />
-                <h4 className="font-semibold text-gray-900">{t('contact.hours')}</h4>
-              </div>
-              <div className="space-y-2 text-gray-600">
-                <div className="flex justify-between">
-                  <span>{t('contact.monday')}</span>
-                  <span>09:00 - 17:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>{t('contact.saturday')}</span>
-                  <span>10:00 - 14:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>{t('contact.sunday')}</span>
-                  <span>{t('contact.closed')}</span>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Map / Image */}
