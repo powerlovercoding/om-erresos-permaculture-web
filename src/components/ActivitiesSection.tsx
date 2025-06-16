@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -75,7 +76,7 @@ const ActivitiesSection = () => {
 
   const ActivitiesGrid = ({ activities }: { activities: typeof communityActivities }) => {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {activities.map((activity, index) => (
           <ActivityCard key={index} activity={activity} index={index} />
         ))}
@@ -91,31 +92,26 @@ const ActivitiesSection = () => {
       viewport={{ once: true }}
       className="h-full"
     >
-      <Card className="overflow-hidden h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group">
-        <div className="relative h-52 overflow-hidden">
+      <Card className="overflow-hidden h-full border-none shadow-none bg-transparent group">
+        <div className="relative h-80 overflow-hidden rounded-xl">
           <img
             src={activity.image}
             alt={t(activity.titleKey)}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-            <activity.icon className="w-5 h-5 text-white" />
-          </div>
-          <h3 className="absolute bottom-4 left-4 right-4 text-white font-bold text-xl font-heading line-clamp-2">
-            {t(activity.titleKey)}
-          </h3>
-        </div>
-        <CardContent className="p-4">
-          <p className="text-sm text-gray-600 line-clamp-4 leading-relaxed">
-            {t(activity.descriptionKey)}
-          </p>
-          <div className="mt-4 flex justify-end">
-            <span className="text-xs text-primary font-medium hover:underline cursor-pointer transition-all">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+            <h3 className="text-white font-bold text-2xl mb-3 font-heading">
+              {t(activity.titleKey)}
+            </h3>
+            <p className="text-white/90 text-sm mb-4 line-clamp-3">
+              {t(activity.descriptionKey)}
+            </p>
+            <button className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg">
               {t('activities.readMore')} →
-            </span>
+            </button>
           </div>
-        </CardContent>
+        </div>
       </Card>
     </motion.div>
   );
@@ -128,7 +124,7 @@ const ActivitiesSection = () => {
       viewport={{ once: true }}
       className={`${isSubtitle ? 'mb-8' : 'text-center mb-12'}`}
     >
-      <h2 className={`${isSubtitle ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl lg:text-5xl'} font-heading font-bold text-gray-900 mb-6`}>
+      <h2 className={`${isSubtitle ? 'text-2xl md:text-3xl text-left' : 'text-3xl md:text-4xl lg:text-5xl'} font-heading font-bold text-gray-900 mb-6`}>
         {t(titleKey)}
       </h2>
       {!isSubtitle && <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>}
