@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -77,7 +76,7 @@ const ActivitiesSection = () => {
 
   const ActivitiesGrid = ({ activities }: { activities: typeof communityActivities }) => {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {activities.map((activity, index) => (
           <ActivityCard key={index} activity={activity} index={index} />
         ))}
@@ -93,27 +92,28 @@ const ActivitiesSection = () => {
       viewport={{ once: true }}
       className="h-full"
     >
-      <Card className="overflow-hidden h-full border-none shadow-none bg-transparent group">
-        <div className="relative h-52 overflow-hidden rounded-xl">
+      <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full">
+        <div className="relative h-48 overflow-hidden">
           <img
             src={activity.image}
             alt={t(activity.titleKey)}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-4">
-            <h3 className="text-white font-bold text-lg mb-2 font-heading">
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+            <h3 className="text-white font-bold text-xl mb-1">
               {t(activity.titleKey)}
             </h3>
-            <p className="text-white/90 text-xs mb-3 line-clamp-2">
-              {t(activity.descriptionKey)}
-            </p>
-            <button className="bg-primary hover:bg-primary-dark text-white px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 hover:shadow-lg">
-              {t('activities.readMore')} →
-            </button>
           </div>
         </div>
-      </Card>
+        <div className="p-6 bg-stone-100">
+          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+            {t(activity.descriptionKey)}
+          </p>
+          <button className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2">
+            {t('activities.readMore')} →
+          </button>
+        </div>
+      </div>
     </motion.div>
   );
 
@@ -166,4 +166,3 @@ const ActivitiesSection = () => {
 };
 
 export default ActivitiesSection;
-
