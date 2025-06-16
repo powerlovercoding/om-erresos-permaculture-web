@@ -68,7 +68,7 @@ const ActivitiesSection = () => {
     },
     {
       icon: Shirt,
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/cf55973a-06a7-428c-87df-83a2d04ff7f1.png",
       titleKey: 'school.upcycling.title',
       descriptionKey: 'school.upcycling.description'
     }
