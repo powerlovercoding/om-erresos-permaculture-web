@@ -78,7 +78,15 @@ const ActivitiesSection = () => {
     }
   ];
 
-  const ActivitiesGrid = ({ activities }: { activities: typeof communityActivities }) => {
+  type Activity = {
+    icon: any;
+    image: string;
+    titleKey: string;
+    descriptionKey: string;
+    fullDescriptionKey?: string;
+  };
+
+  const ActivitiesGrid = ({ activities }: { activities: Activity[] }) => {
     return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {activities.map((activity, index) => (
@@ -88,7 +96,7 @@ const ActivitiesSection = () => {
     );
   };
 
-  const ActivityCard = ({ activity, index }: { activity: any; index: number }) => {
+  const ActivityCard = ({ activity, index }: { activity: Activity; index: number }) => {
     const cardId = `${activity.titleKey}-${index}`;
     const isExpanded = expandedCard === cardId;
     const hasFullDescription = activity.fullDescriptionKey;
