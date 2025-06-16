@@ -77,7 +77,7 @@ const ActivitiesSection = () => {
 
   const ActivitiesGrid = ({ activities }: { activities: typeof communityActivities }) => {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {activities.map((activity, index) => (
           <ActivityCard key={index} activity={activity} index={index} />
         ))}
