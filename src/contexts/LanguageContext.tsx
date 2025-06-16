@@ -40,13 +40,16 @@ const translations = {
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
     
-    // Community Activities - Updated with 3 activities
+    // Community Activities - Updated with new texts
     'community.workshop.title': 'Καθαρίζουμε και Δημιουργούμε',
-    'community.workshop.description': 'Συλλέγουμε απορρίμματα από το περιβάλλον και τα μετατρέπουμε σε χρήσιμα αντικείμενα μέσω δημιουργικής ανακύκλωσης.',
+    'community.workshop.description': 'Μια δράση με ουσία: συγκεντρωνόμαστε για να καθαρίσουμε την παραλία και να μετατρέψουμε τα απορρίμματα σε έργα τέχνης.',
+    'community.workshop.fullDescription': 'Μια δράση με ουσία: συγκεντρωνόμαστε για να καθαρίσουμε την παραλία και να μετατρέψουμε τα απορρίμματα σε έργα τέχνης. Μέσα από μια δημιουργική διαμαρτυρία, στέλνουμε ένα δυνατό μήνυμα για την προστασία του περιβάλλοντος. Δευτέρα 28 Ιουλίου | 18:00 | Κάμπινγκ Σκάλας Ερεσού (πίσω από την καντίνα "Χελώνα").',
     'community.garden.title': 'Από το Πιάτο στο Χώμα',
-    'community.garden.description': 'Μαθαίνουμε την τέχνη της κομποστοποίησης και πώς τα οργανικά απόβλητα γίνονται πλούσιο χώμα για τα φυτά μας.',
+    'community.garden.description': 'Μια συνεργασία με καταστήματα εστίασης στη Σκάλα Ερεσού, όπου ερευνούμε τις πρακτικές διαχείρισης οργανικών αποβλήτων.',
+    'community.garden.fullDescription': 'Μια συνεργασία με καταστήματα εστίασης στη Σκάλα Ερεσού, όπου ερευνούμε τις πρακτικές διαχείρισης οργανικών αποβλήτων. Κατά τη διάρκεια του καλοκαιριού, συλλέγουμε υπολείμματα τροφών και τα μετατρέπουμε σε κομπόστ στον πειραματικό μας αγρό. Ένα βήμα προς έναν κύκλο ζωής χωρίς απόβλητα.',
     'community.compost.title': 'Κοινοτικός Κήπος και Food Forest',
-    'community.compost.description': 'Δημιουργούμε και συντηρούμε κοινοτικούς κήπους και food forest με αρχές permaculture για βιώσιμη τροφική παραγωγή.',
+    'community.compost.description': 'Με βιώσιμες αρχές καλλιέργειας και τεχνικές περμακουλτούρας, δημιουργούμε ένα κοινοτικό οικοσύστημα.',
+    'community.compost.fullDescription': 'Με βιώσιμες αρχές καλλιέργειας και τεχνικές περμακουλτούρας, δημιουργούμε ένα κοινοτικό οικοσύστημα. Οι νέοι μαθαίνουν να συνεργάζονται με τη φύση και να καλλιεργούν διατροφική αυτάρκεια, μεταμορφώνοντας έναν εγκαταλελειμμένο χώρο σε πηγή ζωής.',
     
     // School Activities - Greek names with 7 activities
     'school.education.title': 'Πράσινο Σχολείο',
@@ -121,13 +124,16 @@ const translations = {
     'activities.school.title': 'School Activities',
     'activities.readMore': 'Read more',
     
-    // Community Activities - English translations for 3 activities
+    // Community Activities - English translations
     'community.workshop.title': 'We Clean and Create',
-    'community.workshop.description': 'We collect waste from the environment and transform it into useful objects through creative recycling.',
+    'community.workshop.description': 'A meaningful action: we gather to clean the beach and transform waste into works of art.',
+    'community.workshop.fullDescription': 'A meaningful action: we gather to clean the beach and transform waste into works of art. Through a creative protest, we send a powerful message for environmental protection. Monday, July 28 | 6:00 PM | Skala Eressos Camping (behind the "Turtle" canteen).',
     'community.garden.title': 'From Plate to Soil',
-    'community.garden.description': 'We learn the art of composting and how organic waste becomes rich soil for our plants.',
+    'community.garden.description': 'A collaboration with restaurants in Skala Eressos, where we explore organic waste management practices.',
+    'community.garden.fullDescription': 'A collaboration with restaurants in Skala Eressos, where we explore organic waste management practices. During the summer, we collect food scraps and transform them into compost in our experimental farm. A step towards a zero-waste life cycle.',
     'community.compost.title': 'Community Garden and Food Forest',
-    'community.compost.description': 'We create and maintain community gardens and food forests with permaculture principles for sustainable food production.',
+    'community.compost.description': 'With sustainable cultivation principles and permaculture techniques, we create a community ecosystem.',
+    'community.compost.fullDescription': 'With sustainable cultivation principles and permaculture techniques, we create a community ecosystem. Young people learn to collaborate with nature and cultivate nutritional self-sufficiency, transforming an abandoned space into a source of life.',
     
     // School Activities - English translations for 7 activities
     'school.education.title': 'Green School',

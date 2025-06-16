@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,25 +7,29 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const ActivitiesSection = () => {
   const { t } = useLanguage();
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
 
   const communityActivities = [
     {
       icon: Recycle,
       image: "/lovable-uploads/318a0395-32d1-4adf-9360-3f20f25440a8.png",
       titleKey: 'community.workshop.title',
-      descriptionKey: 'community.workshop.description'
+      descriptionKey: 'community.workshop.description',
+      fullDescriptionKey: 'community.workshop.fullDescription'
     },
     {
       icon: Sprout,
       image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop",
       titleKey: 'community.garden.title',
-      descriptionKey: 'community.garden.description'
+      descriptionKey: 'community.garden.description',
+      fullDescriptionKey: 'community.garden.fullDescription'
     },
     {
       icon: Users,
       image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop",
       titleKey: 'community.compost.title',
-      descriptionKey: 'community.compost.description'
+      descriptionKey: 'community.compost.description',
+      fullDescriptionKey: 'community.compost.fullDescription'
     }
   ];
 
@@ -83,38 +88,63 @@ const ActivitiesSection = () => {
     );
   };
 
-  const ActivityCard = ({ activity, index }: { activity: any; index: number }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="h-full"
-    >
-      <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full">
-        <div className="relative h-56 overflow-hidden">
-          <img
-            src={activity.image}
-            alt={t(activity.titleKey)}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-            <h3 className="text-white font-bold text-xl mb-1">
-              {t(activity.titleKey)}
-            </h3>
+  const ActivityCard = ({ activity, index }: { activity: any; index: number }) => {
+    const cardId = `${activity.titleKey}-${index}`;
+    const isExpanded = expandedCard === cardId;
+    const hasFullDescription = activity.fullDescriptionKey;
+
+    const handleReadMore = () => {
+      if (hasFullDescription) {
+        setExpandedCard(isExpanded ? null : cardId);
+      }
+    };
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        className="h-full"
+      >
+        <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full">
+          <div className="relative h-56 overflow-hidden">
+            <img
+              src={activity.image}
+              alt={t(activity.titleKey)}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+              <h3 className="text-white font-bold text-xl mb-1">
+                {t(activity.titleKey)}
+              </h3>
+            </div>
+          </div>
+          <div className="p-6 bg-stone-100">
+            <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+              {isExpanded && hasFullDescription 
+                ? t(activity.fullDescriptionKey) 
+                : t(activity.descriptionKey)
+              }
+            </p>
+            {hasFullDescription && (
+              <button 
+                onClick={handleReadMore}
+                className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2"
+              >
+                {isExpanded ? 'Διαβάστε λιγότερα' : t('activities.readMore')} →
+              </button>
+            )}
+            {!hasFullDescription && (
+              <button className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2">
+                {t('activities.readMore')} →
+              </button>
+            )}
           </div>
         </div>
-        <div className="p-6 bg-stone-100">
-          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-            {t(activity.descriptionKey)}
-          </p>
-          <button className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2">
-            {t('activities.readMore')} →
-          </button>
-        </div>
-      </div>
-    </motion.div>
-  );
+      </motion.div>
+    );
+  };
 
   const SectionTitle = ({ titleKey, isSubtitle = false }: { titleKey: string, isSubtitle?: boolean }) => (
     <motion.div
