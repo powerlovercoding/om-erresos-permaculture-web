@@ -11,7 +11,7 @@ const ActivitiesSection = () => {
   const communityActivities = [
     {
       icon: Recycle,
-      image: "https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/318a0395-32d1-4adf-9360-3f20f25440a8.png",
       titleKey: 'community.workshop.title',
       descriptionKey: 'community.workshop.description'
     },
