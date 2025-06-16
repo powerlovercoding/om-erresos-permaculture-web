@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
-
 const HeroSection = () => {
   const {
     t
@@ -28,19 +26,15 @@ const HeroSection = () => {
       <div className="container-custom section-padding relative z-10 flex-1 flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Content */}
-          <motion.div 
-            initial={{
-            opacity: 0,
-            x: -50
-          }} 
-          animate={{
-            opacity: 1,
-            x: 0
-          }} 
-          transition={{
-            duration: 0.8
-          }} 
-          className="space-y-6">
+          <motion.div initial={{
+          opacity: 0,
+          x: -50
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.8
+        }} className="space-y-6">
             <div className="flex items-center space-x-2 text-nature-leaf mt-8 md:mt-0">
               <Leaf className="w-6 h-6" />
               <span className="text-sm font-medium uppercase tracking-wider">
@@ -61,29 +55,27 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button onClick={scrollToAbout} size="lg" className="text-black hover:bg-gray-200 px-8 py-3 text-lg font-semibold" style={{ backgroundColor: '#E5EAE5' }}>
+              <Button onClick={scrollToAbout} size="lg" className="text-black hover:bg-gray-200 px-8 py-3 text-lg font-semibold" style={{
+              backgroundColor: '#E5EAE5'
+            }}>
                 {t('hero.cta')}
               </Button>
             </div>
           </motion.div>
 
           {/* Hero Image */}
-          <motion.div 
-            initial={{
-            opacity: 0,
-            x: 50
-          }} 
-          animate={{
-            opacity: 1,
-            x: 0
-          }} 
-          transition={{
-            duration: 0.8,
-            delay: 0.2
-          }} 
-          className="relative">
+          <motion.div initial={{
+          opacity: 0,
+          x: 50
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.2
+        }} className="relative">
             <div className="w-full">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=600&fit=crop" alt="People relaxing on the beach" className="w-full h-96 object-cover rounded-lg shadow-lg" />
+              <img alt="People relaxing on the beach" className="w-full h-96 object-cover rounded-lg shadow-lg" src="/lovable-uploads/fef4016d-1fa4-4b9a-8010-a5fe33ff50c6.jpg" />
             </div>
           </motion.div>
         </div>
