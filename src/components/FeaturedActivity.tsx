@@ -19,7 +19,7 @@ const FeaturedActivity = () => {
     >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
         {/* Left Column - Main Content */}
-        <div className="lg:col-span-2 space-y-5">
+        <div className="lg:col-span-2 space-y-6">
           <div className="flex items-center space-x-3">
             <div className="p-3 bg-primary rounded-full">
               <IconComponent className="w-6 h-6 text-white" />
@@ -50,7 +50,7 @@ const FeaturedActivity = () => {
           </div>
 
           {/* Goal */}
-          <div className="bg-primary/5 p-5 rounded-xl border border-primary/10">
+          <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
             <h4 className="font-semibold text-primary mb-3 flex items-center space-x-2">
               <Target className="w-5 h-5" />
               <span className="text-base">{t('featured.climate.goalTitle')}</span>
@@ -70,17 +70,31 @@ const FeaturedActivity = () => {
             />
           </div>
 
-          {/* Schedule */}
-          <div className="bg-white/70 p-5 rounded-xl border border-primary/10">
-            <h4 className="font-semibold text-gray-900 mb-4 flex items-center space-x-2">
-              <Clock className="w-5 h-5 text-primary" />
-              <span className="text-base">{t('featured.climate.schedule')}</span>
+          {/* Schedule - Enhanced Design */}
+          <div className="bg-gradient-to-br from-white to-nature-soft-green p-6 rounded-xl shadow-md border border-nature-green/20">
+            <h4 className="font-bold text-gray-800 mb-5 flex items-center space-x-2">
+              <div className="p-2 bg-nature-green rounded-lg">
+                <Clock className="w-4 h-4 text-white" />
+              </div>
+              <span className="text-lg">{t('featured.climate.schedule')}</span>
             </h4>
-            <div className="space-y-2 text-sm text-gray-700">
-              <div>{t('featured.climate.time1')}</div>
-              <div>{t('featured.climate.time2')}</div>
-              <div>{t('featured.climate.time3')}</div>
-              <div>{t('featured.climate.time4')}</div>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3 p-3 bg-white/60 rounded-lg border-l-4 border-nature-green">
+                <div className="text-nature-green font-semibold text-sm mt-0.5">10:30</div>
+                <div className="text-sm text-gray-700 leading-relaxed">{t('featured.climate.time1')}</div>
+              </div>
+              <div className="flex items-start space-x-3 p-3 bg-white/60 rounded-lg border-l-4 border-primary">
+                <div className="text-primary font-semibold text-sm mt-0.5">12:30</div>
+                <div className="text-sm text-gray-700 leading-relaxed">{t('featured.climate.time2')}</div>
+              </div>
+              <div className="flex items-start space-x-3 p-3 bg-white/60 rounded-lg border-l-4 border-secondary">
+                <div className="text-secondary font-semibold text-sm mt-0.5">14:00</div>
+                <div className="text-sm text-gray-700 leading-relaxed">{t('featured.climate.time3')}</div>
+              </div>
+              <div className="flex items-start space-x-3 p-3 bg-white/60 rounded-lg border-l-4 border-accent">
+                <div className="text-accent font-semibold text-sm mt-0.5">15:30</div>
+                <div className="text-sm text-gray-700 leading-relaxed">{t('featured.climate.time4')}</div>
+              </div>
             </div>
           </div>
         </div>
