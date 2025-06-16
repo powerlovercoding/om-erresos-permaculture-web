@@ -1,9 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe, SunMoon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavigationMenu, NavigationMenuList } from '@/components/ui/navigation-menu';
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -12,9 +14,11 @@ const Header = () => {
     setLanguage,
     t
   } = useLanguage();
+
   const toggleLanguage = () => {
     setLanguage(language === 'el' ? 'en' : 'el');
   };
+
   const navItems = [{
     key: 'about',
     href: '#about'
@@ -25,6 +29,7 @@ const Header = () => {
     key: 'contact',
     href: '#contact'
   }];
+
   const scrollToSection = (href: string) => {
     console.log('Scrolling to:', href);
 
@@ -60,6 +65,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container-custom section-padding">
         <div className="flex items-center justify-between">
@@ -76,41 +82,49 @@ const Header = () => {
             <img src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" alt="Om Erresos Logo" style={{
             filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))'
           }} className="h-10 w-auto drop-shadow-lg" />
-            <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+            <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-gray-800'}`}>
               ERESSOS
             </span>
           </motion.div>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:block">
-            <NavigationMenuList className="flex items-center space-x-8">
-              {navItems.map((item, index) => <motion.button key={item.key} onClick={() => scrollToSection(item.href)} className={`transition-colors duration-200 font-medium relative ${scrolled ? 'text-gray-700 hover:text-primary py-2 px-3' : 'text-white hover:text-gray-200 py-2 px-3'} rounded-md ${scrolled ? 'hover:bg-primary/10' : 'hover:bg-white/10'}`} initial={{
-              opacity: 0,
-              y: -10
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.3,
-              delay: 0.1 * index
-            }} whileHover={{
-              scale: 1.05
-            }}>
+            <NavigationMenuList className="flex items-center space-x-2">
+              {navItems.map((item, index) => (
+                <motion.button 
+                  key={item.key} 
+                  onClick={() => scrollToSection(item.href)} 
+                  className={`transition-all duration-200 font-medium relative px-4 py-2 rounded-lg border-2 ${
+                    scrolled 
+                      ? 'text-gray-800 hover:text-primary border-gray-300 hover:border-primary bg-white/50 hover:bg-primary/10' 
+                      : 'text-gray-800 hover:text-primary border-gray-400 hover:border-primary bg-white/70 hover:bg-white/90'
+                  } backdrop-blur-sm shadow-sm`} 
+                  initial={{
+                    opacity: 0,
+                    y: -10
+                  }} 
+                  animate={{
+                    opacity: 1,
+                    y: 0
+                  }} 
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.1 * index
+                  }} 
+                  whileHover={{
+                    scale: 1.05,
+                    y: -2
+                  }}
+                >
                   {t(`nav.${item.key}`)}
-                  <motion.span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? 'bg-primary' : 'bg-white'} origin-left`} initial={{
-                scaleX: 0
-              }} whileHover={{
-                scaleX: 1
-              }} transition={{
-                duration: 0.2
-              }} />
-                </motion.button>)}
+                </motion.button>
+              ))}
             </NavigationMenuList>
           </NavigationMenu>
 
           {/* Language Toggle & Mobile Menu */}
           <div className="flex items-center space-x-2 md:space-x-4">
-            <Button variant="outline" size="sm" onClick={toggleLanguage} className={`flex items-center space-x-1 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white'} shadow-sm`}>
+            <Button variant="outline" size="sm" onClick={toggleLanguage} className={`flex items-center space-x-1 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-800'} shadow-sm`}>
               <Globe className="w-4 h-4" />
               <span className="uppercase font-medium">{language}</span>
             </Button>
@@ -120,7 +134,7 @@ const Header = () => {
             scale: 1.05
           }} whileTap={{
             scale: 0.95
-          }} className={`md:hidden p-2 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-white'} rounded-md shadow-sm`} onClick={() => {
+          }} className={`md:hidden p-2 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800'} rounded-md shadow-sm`} onClick={() => {
             console.log('Mobile menu button clicked, current state:', isMenuOpen);
             setIsMenuOpen(!isMenuOpen);
           }}>
@@ -166,4 +180,5 @@ const Header = () => {
       </div>
     </header>;
 };
+
 export default Header;
