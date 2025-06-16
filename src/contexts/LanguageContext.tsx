@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'el' | 'en';
@@ -74,6 +73,21 @@ const translations = {
     'school.upcycling.title': 'Δημιουργικό Upcycling Ρούχων',
     'school.upcycling.description': 'Μαθητές γυμνασίου και λυκείου μαθαίνουν βασικές δεξιότητες ραπτικής και μετατρέπουν παλιά ρούχα σε χρήσιμα αντικείμενα.',
     'school.upcycling.fullDescription': 'Μαθητές γυμνασίου και λυκείου μαθαίνουν βασικές δεξιότητες ραπτικής και μετατρέπουν παλιά ρούχα σε χρήσιμα αντικείμενα. Το εργαστήριο ενισχύει τη δημιουργικότητα, τη συνεργασία και την οικολογική συνείδηση των εφήβων.',
+    
+    // Featured Activity
+    'activities.featured.title': 'Κεντρική Δραστηριότητα',
+    'featured.badge': 'Ειδική Δράση',
+    'featured.climate.title': 'Η Κλιματική Κρίση στο Νησί μας',
+    'featured.climate.description': 'Μια ολοήμερη δράση ευαισθητοποίησης γύρω από την κλιματική κρίση, τις επιπτώσεις της στη Λέσβο και τις συλλογικές απαντήσεις που μπορούμε να δώσουμε. Μέσα από θεωρητικές παρουσιάσεις, διάλογο, συλλογικό γεύμα και συμμετοχικό σχεδιασμό δράσεων, καλλιεργούμε τη γνώση, την αλληλεγγύη και την περιβαλλοντική ευθύνη.',
+    'featured.climate.date': 'Σάββατο 28 Ιουνίου',
+    'featured.climate.location': 'Πολιτιστικό Κέντρο Ερεσού',
+    'featured.climate.schedule': 'Πρόγραμμα Ημέρας',
+    'featured.climate.time1': '🔸 10:30 – 12:00 | Η κλιματική κρίση στην ανατολική Μεσόγειο και οι τοπικές επιπτώσεις',
+    'featured.climate.time2': '🔸 12:30 – 14:00 | Επανασχεδιασμός της ανθρώπινης δραστηριότητας για την προσαρμογή στις νέες συνθήκες',
+    'featured.climate.time3': '🔸 14:00 – 15:30 | Συλλογικός μπουφές – τρώμε όλοι μαζί',
+    'featured.climate.time4': '🔸 15:30 – 17:00 | Εργαστήριο συμμετοχικού σχεδιασμού & παρουσίαση της δράσης "Υιοθεσία Βελανιδιάς"',
+    'featured.climate.goalTitle': 'Στόχος της Δράσης',
+    'featured.climate.goal': 'Στόχος της δράσης είναι να ενεργοποιήσει την τοπική κοινωνία και να δώσει φωνή σε όσους θέλουν να γίνουν μέρος της λύσης. Μέσα από γνώση και συλλογική δράση, χτίζουμε ανθεκτικές κοινότητες μπροστά στην κλιματική πρόκληση.',
     
     // Contact
     'contact.title': 'Στοιχεία Επικοινωνίας',
@@ -165,6 +179,21 @@ const translations = {
     'school.upcycling.title': 'Creative Clothing Upcycling',
     'school.upcycling.description': 'Middle and high school students learn basic sewing skills and transform old clothes into useful objects.',
     'school.upcycling.fullDescription': 'Middle and high school students learn basic sewing skills and transform old clothes into useful objects. The workshop enhances creativity, collaboration and ecological awareness of teenagers.',
+    
+    // Featured Activity
+    'activities.featured.title': 'Featured Activity',
+    'featured.badge': 'Special Action',
+    'featured.climate.title': 'The Climate Crisis on Our Island',
+    'featured.climate.description': 'A full-day awareness action around the climate crisis, its impacts on Lesvos and the collective responses we can give. Through theoretical presentations, dialogue, collective meal and participatory action planning, we cultivate knowledge, solidarity and environmental responsibility.',
+    'featured.climate.date': 'Saturday, June 28',
+    'featured.climate.location': 'Cultural Center of Eresos',
+    'featured.climate.schedule': 'Daily Schedule',
+    'featured.climate.time1': '🔸 10:30 – 12:00 | The climate crisis in the eastern Mediterranean and local impacts',
+    'featured.climate.time2': '🔸 12:30 – 14:00 | Redesigning human activity for adaptation to new conditions',
+    'featured.climate.time3': '🔸 14:00 – 15:30 | Collective buffet – we all eat together',
+    'featured.climate.time4': '🔸 15:30 – 17:00 | Participatory design workshop & presentation of the "Oak Tree Adoption" action',
+    'featured.climate.goalTitle': 'Action Goal',
+    'featured.climate.goal': 'The goal of the action is to activate the local community and give voice to those who want to become part of the solution. Through knowledge and collective action, we build resilient communities in the face of the climate challenge.',
     
     // Contact
     'contact.title': 'Contact Information',

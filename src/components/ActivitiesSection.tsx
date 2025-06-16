@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ActivitiesGrid from './ActivitiesGrid';
 import SectionTitle from './SectionTitle';
+import FeaturedActivity from './FeaturedActivity';
 import { communityActivities, schoolActivities } from '@/data/activitiesData';
 
 const ActivitiesSection = () => {
@@ -12,6 +13,12 @@ const ActivitiesSection = () => {
     <section id="activities" className="py-20 bg-white">
       <div className="container-custom section-padding">
         <SectionTitle titleKey="activities.title" />
+        
+        {/* Featured Activity Section */}
+        <div className="mb-20">
+          <SectionTitle titleKey="activities.featured.title" isSubtitle={true} />
+          <FeaturedActivity />
+        </div>
         
         {/* Community Activities Section */}
         <div className="mb-20">

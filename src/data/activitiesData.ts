@@ -1,5 +1,5 @@
 
-import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt } from 'lucide-react';
+import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt, Globe } from 'lucide-react';
 
 export type Activity = {
   icon: any;
@@ -7,6 +7,14 @@ export type Activity = {
   titleKey: string;
   descriptionKey: string;
   fullDescriptionKey?: string;
+};
+
+export const featuredActivity: Activity = {
+  icon: Globe,
+  image: "/lovable-uploads/fef4016d-1fa4-4b9a-8010-a5fe33ff50c6.jpg",
+  titleKey: 'featured.climate.title',
+  descriptionKey: 'featured.climate.description',
+  fullDescriptionKey: 'featured.climate.fullDescription'
 };
 
 export const communityActivities: Activity[] = [
