@@ -61,7 +61,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button onClick={scrollToAbout} size="lg" className="bg-primary text-white hover:bg-primary/90 px-8 py-3 text-lg font-semibold">
+              <Button onClick={scrollToAbout} size="lg" className="text-black hover:bg-gray-200 px-8 py-3 text-lg font-semibold" style={{ backgroundColor: '#E5EAE5' }}>
                 {t('hero.cta')}
               </Button>
             </div>
