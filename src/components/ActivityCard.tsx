@@ -38,7 +38,7 @@ const ActivityCard = ({ activity, index, expandedCard, setExpandedCard }: Activi
       viewport={{ once: true }}
       className="h-full"
     >
-      <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full">
+      <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full flex flex-col">
         <div className="relative h-56 overflow-hidden">
           <img
             src={activity.image}
@@ -51,26 +51,28 @@ const ActivityCard = ({ activity, index, expandedCard, setExpandedCard }: Activi
             </h3>
           </div>
         </div>
-        <div className="p-6 bg-stone-100">
-          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+        <div className="p-6 bg-stone-100 flex-1 flex flex-col">
+          <p className="text-gray-700 text-sm mb-4 leading-relaxed flex-1">
             {isExpanded && hasFullDescription 
               ? t(activity.fullDescriptionKey) 
               : t(activity.descriptionKey)
             }
           </p>
-          {hasFullDescription && (
-            <button 
-              onClick={handleReadMore}
-              className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2"
-            >
-              {isExpanded ? 'Διαβάστε λιγότερα' : t('activities.readMore')} →
-            </button>
-          )}
-          {!hasFullDescription && (
-            <button className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2">
-              {t('activities.readMore')} →
-            </button>
-          )}
+          <div className="mt-auto">
+            {hasFullDescription && (
+              <button 
+                onClick={handleReadMore}
+                className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2"
+              >
+                {isExpanded ? 'Διαβάστε λιγότερα' : t('activities.readMore')} →
+              </button>
+            )}
+            {!hasFullDescription && (
+              <button className="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors duration-200 flex items-center gap-2">
+                {t('activities.readMore')} →
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
