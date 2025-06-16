@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'el' | 'en';
@@ -40,7 +41,7 @@ const translations = {
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
     
-    // Community Activities - Updated with new texts
+    // Community Activities
     'community.workshop.title': 'Καθαρίζουμε και Δημιουργούμε',
     'community.workshop.description': 'Μια δράση με ουσία: συγκεντρωνόμαστε για να καθαρίσουμε την παραλία και να μετατρέψουμε τα απορρίμματα σε έργα τέχνης.',
     'community.workshop.fullDescription': 'Μια δράση με ουσία: συγκεντρωνόμαστε για να καθαρίσουμε την παραλία και να μετατρέψουμε τα απορρίμματα σε έργα τέχνης. Μέσα από μια δημιουργική διαμαρτυρία, στέλνουμε ένα δυνατό μήνυμα για την προστασία του περιβάλλοντος. Δευτέρα 28 Ιουλίου | 18:00 | Κάμπινγκ Σκάλας Ερεσού (πίσω από την καντίνα "Χελώνα").',
@@ -51,21 +52,28 @@ const translations = {
     'community.compost.description': 'Με βιώσιμες αρχές καλλιέργειας και τεχνικές περμακουλτούρας, δημιουργούμε ένα κοινοτικό οικοσύστημα.',
     'community.compost.fullDescription': 'Με βιώσιμες αρχές καλλιέργειας και τεχνικές περμακουλτούρας, δημιουργούμε ένα κοινοτικό οικοσύστημα. Οι νέοι μαθαίνουν να συνεργάζονται με τη φύση και να καλλιεργούν διατροφική αυτάρκεια, μεταμορφώνοντας έναν εγκαταλελειμμένο χώρο σε πηγή ζωής.',
     
-    // School Activities - Greek names with 7 activities
+    // School Activities - Updated with new texts
     'school.education.title': 'Πράσινο Σχολείο',
-    'school.education.description': 'Διαδραστικά μαθήματα για την κατανόηση των κλιματικών αλλαγών.',
+    'school.education.description': 'Το κομπόστ που φτιάξαμε με φροντίδα επιστρέφει στο ΓΕΛ Άντισσας.',
+    'school.education.fullDescription': 'Το κομπόστ που φτιάξαμε με φροντίδα επιστρέφει στο ΓΕΛ Άντισσας. Το φθινόπωρο, μαζί με μαθητές και εκπαιδευτικούς, φυτεύουμε 15 δέντρα και τοποθετούμε παγκάκια, μεταμορφώνοντας την αυλή σε χώρο ξεκούρασης και οικολογικής συνείδησης.',
     'school.garden.title': 'Ανακύκλωση Πλαστικών',
-    'school.garden.description': 'Μαθαίνοντας να ανακυκλώνουμε πλαστικά υλικά αποτελεσματικά.',
+    'school.garden.description': 'Το Πειραματικό Λύκειο Μυτιλήνης φιλοξενεί για 3 ημέρες το εργαστήριο ανακύκλωσης πλαστικών καπακιών, όπου πρόσφυγες μετατρέπουν απορρίμματα σε χρήσιμα αντικείμενα.',
+    'school.garden.fullDescription': 'Το Πειραματικό Λύκειο Μυτιλήνης φιλοξενεί για 3 ημέρες το εργαστήριο ανακύκλωσης πλαστικών καπακιών, όπου πρόσφυγες μετατρέπουν απορρίμματα σε χρήσιμα αντικείμενα. Η δράση συνοδεύεται από ενημέρωση για τις επιπτώσεις του πλαστικού στη φύση, με στόχο την ευαισθητοποίηση των μαθητών. Σε συνεργασία με την ΑΜΚΕ "Stand by Me Lesvos" & τον σύλλογο "Λέσβος Χωρίς Πλαστικά".',
     'school.recycling.title': 'Ανακύκλωση Νερού και Επεξεργασία Λυμάτων',
-    'school.recycling.description': 'Κατανόηση των συστημάτων διαχείρισης νερού και λυμάτων.',
+    'school.recycling.description': 'Το Λύκειο Καλλονής επισκέπτεται τον πειραματικό χώρο HYDRO1 για να γνωρίσει πώς τα λύματα μετατρέπονται σε νερό άρδευσης.',
+    'school.recycling.fullDescription': 'Το Λύκειο Καλλονής επισκέπτεται τον πειραματικό χώρο HYDRO1 για να γνωρίσει πώς τα λύματα μετατρέπονται σε νερό άρδευσης. Στη συνέχεια, στο HYDRO2, παρακολουθούν στην πράξη την άρδευση ενός αγροδασικού συστήματος με το επεξεργασμένο νερό. Συνεργασία με το Πανεπιστήμιο Αιγαίου & το έργο Horizon2020 "Hydrousa".',
     'school.climate.title': 'Οι Μέλισσες και οι Επικονιαστές',
-    'school.climate.description': 'Εξερεύνηση του ρόλου των μελισσών στο οικοσύστημα.',
+    'school.climate.description': 'Ενημερωνόμαστε για τη λεσβιακή μελισσοκομία και την ποικιλότητα των επικονιαστών, καθώς και για τις απειλές που αντιμετωπίζουν.',
+    'school.climate.fullDescription': 'Ενημερωνόμαστε για τη λεσβιακή μελισσοκομία και την ποικιλότητα των επικονιαστών, καθώς και για τις απειλές που αντιμετωπίζουν. Η δράση ολοκληρώνεται με εργαστήριο πολλαπλασιασμού φυτών φιλικών προς τις μέλισσες και τους επικονιαστές. Συνεργασία με τον Μελισσοκομικό Συνεταιρισμό Λέσβου.',
     'school.biodiversity.title': 'Τοπικές Ποικιλίες και Σπόροι',
-    'school.biodiversity.description': 'Γνωριμία με τις τοπικές ποικιλίες φυτών και τη διατήρηση σπόρων.',
+    'school.biodiversity.description': 'Το Γυμνάσιο Άγρας φιλοξενεί την ομάδα του Αιγίλοπα και ενημερώνεται για τη σημασία διατήρησης των τοπικών ποικιλιών καλλιεργούμενων φυτών.',
+    'school.biodiversity.fullDescription': 'Το Γυμνάσιο Άγρας φιλοξενεί την ομάδα του Αιγίλοπα και ενημερώνεται για τη σημασία διατήρησης των τοπικών ποικιλιών καλλιεργούμενων φυτών. Οι μαθητές, πολλοί εκ των οποίων προέρχονται από αγροτικές οικογένειες, ενθαρρύνονται να συνεχίσουν την παράδοση της βιώσιμης γεωργίας. Συνεργασία με την ΑΜΚΕ "Αιγίλοπας – Δίκτυο για τη Βιοποικιλότητα".',
     'school.sustainability.title': 'Θεατρικό Εργαστήρι για Παιδιά',
-    'school.sustainability.description': 'Δημιουργική έκφραση μέσω θεάτρου για περιβαλλοντικά θέματα.',
+    'school.sustainability.description': 'Μέσα από το θεατρικό παιχνίδι, τα παιδιά της Λέσβου ανακαλύπτουν τη δύναμη της έκφρασης και "δίνουν φωνή στη Γη".',
+    'school.sustainability.fullDescription': 'Μέσα από το θεατρικό παιχνίδι, τα παιδιά της Λέσβου ανακαλύπτουν τη δύναμη της έκφρασης και "δίνουν φωνή στη Γη". Η τέχνη γίνεται εργαλείο για την κατανόηση και την αντιμετώπιση της κλιματικής κρίσης.',
     'school.upcycling.title': 'Δημιουργικό Upcycling Ρούχων',
-    'school.upcycling.description': 'Μετατροπή παλαιών ρούχων σε νέα δημιουργικά κομμάτια.',
+    'school.upcycling.description': 'Μαθητές γυμνασίου και λυκείου μαθαίνουν βασικές δεξιότητες ραπτικής και μετατρέπουν παλιά ρούχα σε χρήσιμα αντικείμενα.',
+    'school.upcycling.fullDescription': 'Μαθητές γυμνασίου και λυκείου μαθαίνουν βασικές δεξιότητες ραπτικής και μετατρέπουν παλιά ρούχα σε χρήσιμα αντικείμενα. Το εργαστήριο ενισχύει τη δημιουργικότητα, τη συνεργασία και την οικολογική συνείδηση των εφήβων.',
     
     // Contact
     'contact.title': 'Στοιχεία Επικοινωνίας',
@@ -124,7 +132,7 @@ const translations = {
     'activities.school.title': 'School Activities',
     'activities.readMore': 'Read more',
     
-    // Community Activities - English translations
+    // Community Activities
     'community.workshop.title': 'We Clean and Create',
     'community.workshop.description': 'A meaningful action: we gather to clean the beach and transform waste into works of art.',
     'community.workshop.fullDescription': 'A meaningful action: we gather to clean the beach and transform waste into works of art. Through a creative protest, we send a powerful message for environmental protection. Monday, July 28 | 6:00 PM | Skala Eressos Camping (behind the "Turtle" canteen).',
@@ -135,21 +143,28 @@ const translations = {
     'community.compost.description': 'With sustainable cultivation principles and permaculture techniques, we create a community ecosystem.',
     'community.compost.fullDescription': 'With sustainable cultivation principles and permaculture techniques, we create a community ecosystem. Young people learn to collaborate with nature and cultivate nutritional self-sufficiency, transforming an abandoned space into a source of life.',
     
-    // School Activities - English translations for 7 activities
+    // School Activities - English translations with new content
     'school.education.title': 'Green School',
-    'school.education.description': 'Interactive lessons for understanding climate change.',
+    'school.education.description': 'The compost we carefully made returns to the General Lyceum of Antissa.',
+    'school.education.fullDescription': 'The compost we carefully made returns to the General Lyceum of Antissa. In autumn, together with students and teachers, we plant 15 trees and place benches, transforming the courtyard into a space for rest and ecological awareness.',
     'school.garden.title': 'Plastic Recycling',
-    'school.garden.description': 'Learning to effectively recycle plastic materials.',
+    'school.garden.description': 'The Experimental Lyceum of Mytilene hosts a 3-day workshop on recycling plastic caps, where refugees transform waste into useful objects.',
+    'school.garden.fullDescription': 'The Experimental Lyceum of Mytilene hosts a 3-day workshop on recycling plastic caps, where refugees transform waste into useful objects. The action is accompanied by information about the effects of plastic on nature, aiming to raise student awareness. In collaboration with the NGO "Stand by Me Lesvos" & the association "Lesvos Without Plastics".',
     'school.recycling.title': 'Water Recycling and Wastewater Treatment',
-    'school.recycling.description': 'Understanding water and wastewater management systems.',
+    'school.recycling.description': 'The Lyceum of Kalloni visits the experimental space HYDRO1 to learn how wastewater is converted into irrigation water.',
+    'school.recycling.fullDescription': 'The Lyceum of Kalloni visits the experimental space HYDRO1 to learn how wastewater is converted into irrigation water. Then, at HYDRO2, they observe in practice the irrigation of an agroforestry system with the treated water. Collaboration with the University of the Aegean & the Horizon2020 project "Hydrousa".',
     'school.climate.title': 'Bees and Pollinators',
-    'school.climate.description': 'Exploring the role of bees in the ecosystem.',
+    'school.climate.description': 'We learn about Lesvos beekeeping and the diversity of pollinators, as well as the threats they face.',
+    'school.climate.fullDescription': 'We learn about Lesvos beekeeping and the diversity of pollinators, as well as the threats they face. The action concludes with a workshop on propagating plants friendly to bees and pollinators. Collaboration with the Beekeeping Cooperative of Lesvos.',
     'school.biodiversity.title': 'Local Varieties and Seeds',
-    'school.biodiversity.description': 'Getting to know local plant varieties and seed preservation.',
+    'school.biodiversity.description': 'The Gymnasium of Agra hosts the Aegilops team and learns about the importance of preserving local varieties of cultivated plants.',
+    'school.biodiversity.fullDescription': 'The Gymnasium of Agra hosts the Aegilops team and learns about the importance of preserving local varieties of cultivated plants. Students, many of whom come from farming families, are encouraged to continue the tradition of sustainable agriculture. Collaboration with the NGO "Aegilops – Network for Biodiversity".',
     'school.sustainability.title': 'Theatre Workshop for Children',
-    'school.sustainability.description': 'Creative expression through theatre for environmental topics.',
+    'school.sustainability.description': 'Through theatrical play, the children of Lesvos discover the power of expression and "give voice to the Earth".',
+    'school.sustainability.fullDescription': 'Through theatrical play, the children of Lesvos discover the power of expression and "give voice to the Earth". Art becomes a tool for understanding and addressing the climate crisis.',
     'school.upcycling.title': 'Creative Clothing Upcycling',
-    'school.upcycling.description': 'Transforming old clothes into new creative pieces.',
+    'school.upcycling.description': 'Middle and high school students learn basic sewing skills and transform old clothes into useful objects.',
+    'school.upcycling.fullDescription': 'Middle and high school students learn basic sewing skills and transform old clothes into useful objects. The workshop enhances creativity, collaboration and ecological awareness of teenagers.',
     
     // Contact
     'contact.title': 'Contact Information',
