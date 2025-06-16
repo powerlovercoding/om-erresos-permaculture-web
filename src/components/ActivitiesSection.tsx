@@ -50,7 +50,7 @@ const ActivitiesSection = () => {
     },
     {
       icon: Users,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/ac6b8ceb-6f7e-4c61-8a03-a305e7db084a.png",
       titleKey: 'school.climate.title',
       descriptionKey: 'school.climate.description'
     },
