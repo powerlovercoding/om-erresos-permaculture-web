@@ -83,7 +83,7 @@ const HeroSection = () => {
           }} 
           className="relative">
             <div className="w-full">
-              <img src="https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=600&h=600&fit=crop" alt="People relaxing on the beach" className="w-full h-96 object-cover rounded-lg shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=600&fit=crop" alt="People relaxing on the beach" className="w-full h-96 object-cover rounded-lg shadow-lg" />
             </div>
           </motion.div>
         </div>
