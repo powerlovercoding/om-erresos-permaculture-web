@@ -40,21 +40,15 @@ const translations = {
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
     
-    // Community Activities - Updated names
-    'community.workshop.title': 'Εισαγωγή στις Πολιτιστικές Πτυχές',
-    'community.workshop.description': 'Εξερεύνηση των πολιτιστικών παραδόσεων και της σχέσης τους με το περιβάλλον.',
-    'community.garden.title': 'Καλλιτεχνική Παρέμβαση στην Παραλία',
-    'community.garden.description': 'Δημιουργικές δραστηριότητες τέχνης που αναδεικνύουν την περιβαλλοντική ευαισθητοποίηση.',
-    'community.compost.title': 'Κοινοτικός Κήπος',
-    'community.compost.description': 'Δημιουργία και συντήρηση κοινοτικών κήπων με αρχές permaculture.',
-    'community.water.title': 'Ερωτηματολόγιο και Συλλογή Απορριμμάτων',
-    'community.water.description': 'Έρευνα και πρακτική δράση για την καθαριότητα του περιβάλλοντος.',
-    'community.seeds.title': 'Εργαστήριο Permaculture',
-    'community.seeds.description': 'Πρακτικά εργαστήρια για την εκμάθηση τεχνικών permaculture και βιώσιμης καλλιέργειας.',
-    'community.energy.title': 'Εργαστήριο Βοτάνων',
-    'community.energy.description': 'Μάθετε για τα τοπικά βότανα και τις θεραπευτικές τους ιδιότητες.',
+    // Community Activities - Updated with 3 activities
+    'community.workshop.title': 'Καθαρίζουμε και Δημιουργούμε',
+    'community.workshop.description': 'Συλλέγουμε απορρίμματα από το περιβάλλον και τα μετατρέπουμε σε χρήσιμα αντικείμενα μέσω δημιουργικής ανακύκλωσης.',
+    'community.garden.title': 'Από το Πιάτο στο Χώμα',
+    'community.garden.description': 'Μαθαίνουμε την τέχνη της κομποστοποίησης και πώς τα οργανικά απόβλητα γίνονται πλούσιο χώμα για τα φυτά μας.',
+    'community.compost.title': 'Κοινοτικός Κήπος και Food Forest',
+    'community.compost.description': 'Δημιουργούμε και συντηρούμε κοινοτικούς κήπους και food forest με αρχές permaculture για βιώσιμη τροφική παραγωγή.',
     
-    // School Activities - Updated with correct Greek names
+    // School Activities - Greek names with 7 activities
     'school.education.title': 'Πράσινο Σχολείο',
     'school.education.description': 'Διαδραστικά μαθήματα για την κατανόηση των κλιματικών αλλαγών.',
     'school.garden.title': 'Ανακύκλωση Πλαστικών',
@@ -127,21 +121,15 @@ const translations = {
     'activities.school.title': 'School Activities',
     'activities.readMore': 'Read more',
     
-    // Community Activities - Updated with correct Greek names
-    'community.workshop.title': 'Introduction to Cultural Aspects',
-    'community.workshop.description': 'Exploring cultural traditions and their relationship with the environment.',
-    'community.garden.title': 'Art Intervention on the Beach',
-    'community.garden.description': 'Creative art activities that highlight environmental awareness.',
-    'community.compost.title': 'Communal Garden',
-    'community.compost.description': 'Creating and maintaining community gardens with permaculture principles.',
-    'community.water.title': 'Questionnaire and Waste Collection',
-    'community.water.description': 'Research and practical action for environmental cleanliness.',
-    'community.seeds.title': 'Permaculture Workshop',
-    'community.seeds.description': 'Practical workshops for learning permaculture techniques and sustainable cultivation.',
-    'community.energy.title': 'Herb Workshop',
-    'community.energy.description': 'Learn about local herbs and their therapeutic properties.',
+    // Community Activities - English translations for 3 activities
+    'community.workshop.title': 'We Clean and Create',
+    'community.workshop.description': 'We collect waste from the environment and transform it into useful objects through creative recycling.',
+    'community.garden.title': 'From Plate to Soil',
+    'community.garden.description': 'We learn the art of composting and how organic waste becomes rich soil for our plants.',
+    'community.compost.title': 'Community Garden and Food Forest',
+    'community.compost.description': 'We create and maintain community gardens and food forests with permaculture principles for sustainable food production.',
     
-    // School Activities - English translations
+    // School Activities - English translations for 7 activities
     'school.education.title': 'Green School',
     'school.education.description': 'Interactive lessons for understanding climate change.',
     'school.garden.title': 'Plastic Recycling',

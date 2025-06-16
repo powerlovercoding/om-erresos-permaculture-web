@@ -9,40 +9,22 @@ const ActivitiesSection = () => {
 
   const communityActivities = [
     {
-      icon: Sprout,
-      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop",
+      icon: Recycle,
+      image: "https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=400&h=300&fit=crop",
       titleKey: 'community.workshop.title',
       descriptionKey: 'community.workshop.description'
     },
     {
-      icon: Users,
-      image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop",
+      icon: Sprout,
+      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop",
       titleKey: 'community.garden.title',
       descriptionKey: 'community.garden.description'
     },
     {
-      icon: Recycle,
-      image: "https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=400&h=300&fit=crop",
+      icon: Users,
+      image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop",
       titleKey: 'community.compost.title',
       descriptionKey: 'community.compost.description'
-    },
-    {
-      icon: Droplets,
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
-      titleKey: 'community.water.title',
-      descriptionKey: 'community.water.description'
-    },
-    {
-      icon: Sprout,
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=300&fit=crop",
-      titleKey: 'community.seeds.title',
-      descriptionKey: 'community.seeds.description'
-    },
-    {
-      icon: Zap,
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop",
-      titleKey: 'community.energy.title',
-      descriptionKey: 'community.energy.description'
     }
   ];
 
