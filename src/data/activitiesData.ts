@@ -79,7 +79,7 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Zap,
-    image: "/lovable-uploads/39f20215-b8f5-4a37-a2e7-67a054d9834a.png",
+    image: "/lovable-uploads/72ba4d86-c815-409a-af6b-540f24fd6e20.png",
     titleKey: 'school.sustainability.title',
     descriptionKey: 'school.sustainability.description',
     fullDescriptionKey: 'school.sustainability.fullDescription'
