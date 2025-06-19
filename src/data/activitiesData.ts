@@ -34,7 +34,7 @@ export const communityActivities: Activity[] = [
   },
   {
     icon: Users,
-    image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop",
+    image: "/lovable-uploads/d08cf0e9-fa46-4503-a10c-4b32c4d8c1f7.png",
     titleKey: 'community.compost.title',
     descriptionKey: 'community.compost.description',
     fullDescriptionKey: 'community.compost.fullDescription'
