@@ -1,4 +1,3 @@
-
 import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt, Globe } from 'lucide-react';
 
 export type Activity = {
@@ -44,14 +43,14 @@ export const communityActivities: Activity[] = [
 export const schoolActivities: Activity[] = [
   {
     icon: School,
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=300&fit=crop",
+    image: "/lovable-uploads/36371c0e-678d-47af-8107-56f98cbeaeb0.png",
     titleKey: 'school.education.title',
     descriptionKey: 'school.education.description',
     fullDescriptionKey: 'school.education.fullDescription'
   },
   {
     icon: Recycle,
-    image: "/lovable-uploads/36371c0e-678d-47af-8107-56f98cbeaeb0.png",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
     titleKey: 'school.garden.title',
     descriptionKey: 'school.garden.description',
     fullDescriptionKey: 'school.garden.fullDescription'
