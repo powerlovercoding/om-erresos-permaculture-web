@@ -51,7 +51,7 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Recycle,
-    image: "/lovable-uploads/96546591-423c-4455-b2a2-acf2379584a7.png",
+    image: "/lovable-uploads/36371c0e-678d-47af-8107-56f98cbeaeb0.png",
     titleKey: 'school.garden.title',
     descriptionKey: 'school.garden.description',
     fullDescriptionKey: 'school.garden.fullDescription'
