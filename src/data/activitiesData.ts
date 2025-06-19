@@ -72,7 +72,7 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Sprout,
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
+    image: "/lovable-uploads/2a7045c0-a506-4917-b461-a0a5060116a9.png",
     titleKey: 'school.biodiversity.title',
     descriptionKey: 'school.biodiversity.description',
     fullDescriptionKey: 'school.biodiversity.fullDescription'
