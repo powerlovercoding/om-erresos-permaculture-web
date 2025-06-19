@@ -1,4 +1,3 @@
-
 import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt, Globe } from 'lucide-react';
 
 export type Activity = {
@@ -20,7 +19,7 @@ export const featuredActivity: Activity = {
 export const communityActivities: Activity[] = [
   {
     icon: Recycle,
-    image: "/lovable-uploads/318a0395-32d1-4adf-9360-3f20f25440a8.png",
+    image: "/lovable-uploads/1a3aaf06-22e5-4a0c-a69b-f610d18a8845.png",
     titleKey: 'community.workshop.title',
     descriptionKey: 'community.workshop.description',
     fullDescriptionKey: 'community.workshop.fullDescription'
