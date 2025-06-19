@@ -41,7 +41,7 @@ const ActivityCard = ({ activity, index, expandedCard, setExpandedCard }: Activi
       <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full flex flex-col">
         <div className="relative h-56 overflow-hidden">
           <img
-            src="/lovable-uploads/f53e4474-9b36-432a-92cb-ad96f9641d53.png"
+            src={activity.image}
             alt={t(activity.titleKey)}
             className="w-full h-full object-cover"
           />
