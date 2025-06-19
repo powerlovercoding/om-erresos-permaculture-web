@@ -11,7 +11,7 @@ export type Activity = {
 
 export const featuredActivity: Activity = {
   icon: Globe,
-  image: "/lovable-uploads/fef4016d-1fa4-4b9a-8010-a5fe33ff50c6.jpg",
+  image: "/lovable-uploads/cdaa293b-d3fd-4442-9c78-28288fa0a2d5.png",
   titleKey: 'featured.climate.title',
   descriptionKey: 'featured.climate.description',
   fullDescriptionKey: 'featured.climate.fullDescription'
