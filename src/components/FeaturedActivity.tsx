@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -61,37 +60,37 @@ const FeaturedActivity = () => {
 
         {/* Right Column - Image and Schedule */}
         <div className="space-y-4">
-          {/* Image */}
+          {/* Image - Made more square */}
           <div className="overflow-hidden rounded-xl shadow-lg">
             <img
               src={featuredActivity.image}
               alt={t(featuredActivity.titleKey)}
-              className="w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500"
+              className="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500"
             />
           </div>
 
-          {/* Schedule - Enhanced Design */}
-          <div className="bg-gradient-to-br from-white to-nature-soft-green p-4 rounded-xl shadow-md border border-nature-green/20">
-            <h4 className="font-bold text-gray-800 mb-3 flex items-center space-x-2">
-              <div className="p-1.5 bg-nature-green rounded-lg">
+          {/* Schedule - Made shorter */}
+          <div className="bg-gradient-to-br from-white to-nature-soft-green p-3 rounded-xl shadow-md border border-nature-green/20">
+            <h4 className="font-bold text-gray-800 mb-2 flex items-center space-x-2">
+              <div className="p-1 bg-nature-green rounded-lg">
                 <Clock className="w-3 h-3 text-white" />
               </div>
               <span className="text-sm">{t('featured.climate.schedule')}</span>
             </h4>
-            <div className="space-y-2">
-              <div className="flex items-start space-x-2 p-2 bg-white/60 rounded-lg border-l-3 border-nature-green">
+            <div className="space-y-1.5">
+              <div className="flex items-start space-x-2 p-1.5 bg-white/60 rounded-lg border-l-2 border-nature-green">
                 <div className="text-nature-green font-semibold text-xs mt-0.5">10:30</div>
                 <div className="text-xs text-gray-700 leading-relaxed">{t('featured.climate.time1')}</div>
               </div>
-              <div className="flex items-start space-x-2 p-2 bg-white/60 rounded-lg border-l-3 border-primary">
+              <div className="flex items-start space-x-2 p-1.5 bg-white/60 rounded-lg border-l-2 border-primary">
                 <div className="text-primary font-semibold text-xs mt-0.5">12:30</div>
                 <div className="text-xs text-gray-700 leading-relaxed">{t('featured.climate.time2')}</div>
               </div>
-              <div className="flex items-start space-x-2 p-2 bg-white/60 rounded-lg border-l-3 border-secondary">
+              <div className="flex items-start space-x-2 p-1.5 bg-white/60 rounded-lg border-l-2 border-secondary">
                 <div className="text-secondary font-semibold text-xs mt-0.5">14:00</div>
                 <div className="text-xs text-gray-700 leading-relaxed">{t('featured.climate.time3')}</div>
               </div>
-              <div className="flex items-start space-x-2 p-2 bg-white/60 rounded-lg border-l-3 border-accent">
+              <div className="flex items-start space-x-2 p-1.5 bg-white/60 rounded-lg border-l-2 border-accent">
                 <div className="text-accent font-semibold text-xs mt-0.5">15:30</div>
                 <div className="text-xs text-gray-700 leading-relaxed">{t('featured.climate.time4')}</div>
               </div>
