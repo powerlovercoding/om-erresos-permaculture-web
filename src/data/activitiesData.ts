@@ -65,14 +65,14 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Users,
-    image: "/lovable-uploads/ac6b8ceb-6f7e-4c61-8a03-a305e7db084a.png",
+    image: "/lovable-uploads/a2d6ed54-8300-4822-bf8f-a49d8aea7eac.png",
     titleKey: 'school.climate.title',
     descriptionKey: 'school.climate.description',
     fullDescriptionKey: 'school.climate.fullDescription'
   },
   {
     icon: Sprout,
-    image: "/lovable-uploads/a2d6ed54-8300-4822-bf8f-a49d8aea7eac.png",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
     titleKey: 'school.biodiversity.title',
     descriptionKey: 'school.biodiversity.description',
     fullDescriptionKey: 'school.biodiversity.fullDescription'
