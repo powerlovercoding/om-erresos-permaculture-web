@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -24,6 +23,16 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-24 h-24 border border-gray-300/30 rounded-full"></div>
         <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
       </div>
+
+      {/* Small curved orange accent in bottom right corner */}
+      <div 
+        className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at bottom right, #f97316 0%, #f97316 30%, transparent 70%)',
+          clipPath: 'polygon(60% 100%, 100% 100%, 100% 60%)',
+          opacity: 0.8
+        }}
+      ></div>
 
       {/* Orange curved background effect - matching the screenshot */}
       <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
