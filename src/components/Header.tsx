@@ -78,11 +78,11 @@ const Header = () => {
           x: 0
         }} transition={{
           duration: 0.5
-        }} className="flex items-center space-x-3">
+        }} className="flex items-center space-x-2 md:space-x-3 -ml-2 md:ml-0">
             <img src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" alt="Om Erresos Logo" style={{
             filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))'
-          }} className="h-10 w-auto drop-shadow-lg" />
-            <span className={`font-heading font-semibold text-xl ${scrolled ? 'text-gray-900' : 'text-gray-800'}`}>
+          }} className="h-7 w-auto md:h-10 drop-shadow-lg" />
+            <span className={`font-heading font-semibold text-base md:text-xl ${scrolled ? 'text-gray-900' : 'text-gray-800'}`}>
               ERESSOS
             </span>
           </motion.div>
