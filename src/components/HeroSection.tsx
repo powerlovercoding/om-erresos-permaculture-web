@@ -17,7 +17,7 @@ const HeroSection = () => {
   };
   return <section className="min-h-screen flex flex-col items-center justify-center pt-16 hero-gradient text-white relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-20 bg-zinc-950">
+      <div className="absolute inset-0 opacity-20 bg-[nature-light-green] bg-cyan-700">
         <div className="absolute bottom-20 right-10 w-24 h-24 border border-gray-300/30 rounded-full"></div>
         <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
       </div>
