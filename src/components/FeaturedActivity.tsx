@@ -18,7 +18,7 @@ const FeaturedActivity = () => {
     duration: 0.7
   }} viewport={{
     once: true
-  }} className="from-primary/10 to-nature-mint p-6 rounded-2xl shadow-lg border border-primary/20 bg-[DCFCE7] bg-green-100/[0.78]">
+  }} className="from-primary/10 to-nature-mint p-6 rounded-2xl shadow-lg border border-primary/20 bg-[DCFCE7] bg-[#bee1c9]/75">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
         {/* Left Column - Main Content */}
         <div className="lg:col-span-2 space-y-4">
