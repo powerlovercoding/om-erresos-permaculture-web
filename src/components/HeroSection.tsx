@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -23,22 +24,22 @@ const HeroSection = () => {
         <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
       </div>
 
-      {/* Subtle coral wave in bottom right corner - exact specifications */}
+      {/* Subtle coral wave in bottom right corner */}
       <div className="absolute pointer-events-none" style={{ 
-        bottom: '10%', 
-        right: '15%', 
-        width: '15vw', 
-        height: '10vh' 
+        bottom: '0', 
+        right: '0', 
+        width: '200px', 
+        height: '120px' 
       }}>
         <svg 
-          viewBox="0 0 100 100" 
+          viewBox="0 0 200 120" 
           className="w-full h-full" 
           preserveAspectRatio="none"
         >
           <path
-            d="M100 80 Q85 60 70 65 Q55 70 40 68 Q25 66 10 70 Q5 72 0 75 L0 100 L100 100 Z"
+            d="M200 80 C180 75, 160 85, 140 80 C120 75, 100 85, 80 80 C60 75, 40 85, 20 80 C10 78, 5 79, 0 80 L0 120 L200 120 Z"
             fill="#F5A992"
-            opacity="0.25"
+            opacity="0.2"
           />
         </svg>
       </div>
