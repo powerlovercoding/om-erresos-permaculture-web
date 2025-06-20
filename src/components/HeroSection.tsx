@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -19,38 +20,20 @@ const HeroSection = () => {
   return <section className="min-h-screen flex flex-col items-center justify-center pt-16 hero-gradient text-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-20 bg-zinc-950">
-        
         <div className="absolute bottom-20 right-10 w-24 h-24 border border-gray-300/30 rounded-full"></div>
         <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
       </div>
 
-      {/* Small curved orange accent in bottom right corner */}
-      <div 
-        className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at bottom right, #f97316 0%, #f97316 30%, transparent 70%)',
-          clipPath: 'polygon(60% 100%, 100% 100%, 100% 60%)',
-          opacity: 0.8
-        }}
-      ></div>
-
-      {/* Orange curved background effect - matching the screenshot */}
-      <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
-        <svg viewBox="0 0 100 100" className="absolute bottom-0 right-0 w-2/3 h-full" preserveAspectRatio="none">
+      {/* Small wave in bottom right corner */}
+      <div className="absolute bottom-0 right-0 w-48 h-32 pointer-events-none">
+        <svg 
+          viewBox="0 0 200 100" 
+          className="w-full h-full" 
+          preserveAspectRatio="none"
+        >
           <path
-            d="M20 100 Q50 30 100 0 L100 100 Z"
+            d="M120 100 Q160 60 200 80 L200 100 Z"
             fill="#f97316"
-            opacity="0.8"
-          />
-        </svg>
-      </div>
-
-      {/* Additional curved layer for more depth */}
-      <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
-        <svg viewBox="0 0 100 100" className="absolute bottom-0 right-0 w-1/2 h-4/5" preserveAspectRatio="none">
-          <path
-            d="M30 100 Q60 40 100 20 L100 100 Z"
-            fill="#ea580c"
             opacity="0.6"
           />
         </svg>
