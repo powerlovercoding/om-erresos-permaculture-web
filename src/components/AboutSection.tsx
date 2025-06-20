@@ -75,7 +75,7 @@ const AboutSection = () => {
             }} viewport={{
               once: true
             }} className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-[#5d9871]">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
