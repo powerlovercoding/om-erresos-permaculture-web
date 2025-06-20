@@ -37,26 +37,34 @@ const HeroSection = () => {
           duration: 0.8
         }} className="space-y-6">
             <div className="flex items-center space-x-2 text-nature-leaf mt-8 md:mt-0">
-              <Leaf className="w-6 h-6" />
-              <span className="text-sm font-medium uppercase tracking-wider">Youth led projects against climate change</span>
+              <Leaf className="w-6 h-6 text-green-600" />
+              <span className="text-sm font-medium uppercase tracking-wider text-green-700 bg-green-100 px-3 py-1 rounded-full">
+                Youth led projects against climate change
+              </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-gray-800">
-              {t('hero.title')}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
+              <span className="text-gray-900">{t('hero.title').split(' ').slice(0, 2).join(' ')}</span>
+              <br />
+              <span className="text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text">
+                {t('hero.title').split(' ').slice(2).join(' ')}
+              </span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-gray-700 font-medium">
-              {t('hero.subtitle')}
+            <h2 className="text-xl md:text-2xl font-medium">
+              <span className="text-gray-700">{t('hero.subtitle')}</span>
             </h2>
 
-            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-              {t('hero.description')}
+            <p className="text-lg leading-relaxed max-w-2xl">
+              <span className="text-gray-600 font-light">{t('hero.description')}</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button onClick={scrollToAbout} size="lg" className="text-black hover:bg-gray-200 px-8 py-3 text-lg font-semibold" style={{
-              backgroundColor: '#E5EAE5'
-            }}>
+              <Button 
+                onClick={scrollToAbout} 
+                size="lg" 
+                className="text-white hover:bg-green-700 px-8 py-3 text-lg font-semibold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
                 {t('hero.cta')}
               </Button>
             </div>
