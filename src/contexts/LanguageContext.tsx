@@ -20,7 +20,7 @@ const translations = {
     // Hero
     'hero.title': 'Νέοι για το Κλίμα στη Λέσβο',
     'hero.subtitle': 'Μια Νέα γενιά για το κλίμα με γνώση, φαντασία και φροντίδα',
-    'hero.description': 'Ανακαλύψτε πώς η permaculture μπορεί να μεταμορφώσει τις κοινότητές μας και να προστατεύσει το περιβάλλον για τις επόμενες γενιές.',
+    'hero.description': 'Ανακαλύψτε πως συνδιάζοντας πρακτικές βιωσιμότητας, όπως η αναγεννητική καλλιέργεια, η ανακύκλωση και η επαναχρησιμοποίηση και με συλλογικές δράσεις προσπαθούμε να ενδυναμώσουμε τη νεολαία την κοινότητα και το περιβάλλον μας.',
     'hero.cta': 'Μάθετε Περισσότερα',
     
     // About
@@ -126,7 +126,7 @@ const translations = {
     // Hero
     'hero.title': 'Youth for Climate in Lesvos',
     'hero.subtitle': 'A New Generation for Climate with Knowledge, Imagination and Care',
-    'hero.description': 'Discover how permaculture can transform our communities and protect the environment for future generations.',
+    'hero.description': 'Discover how by combining sustainability practices, such as regenerative agriculture, recycling and reuse, and through collective actions, we strive to empower youth, community and our environment.',
     'hero.cta': 'Learn More',
     
     // About
