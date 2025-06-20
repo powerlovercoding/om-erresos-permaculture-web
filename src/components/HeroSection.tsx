@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -24,13 +25,13 @@ const HeroSection = () => {
         <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
       </div>
 
-      {/* Orange curved background effect */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 opacity-80">
-        <svg viewBox="0 0 400 400" className="w-full h-full">
+      {/* Orange curved background effect - matching the screenshot */}
+      <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
+        <svg viewBox="0 0 100 100" className="absolute bottom-0 right-0 w-1/2 h-full" preserveAspectRatio="none">
           <path
-            d="M400 400L400 200Q400 100 300 100Q200 100 200 200L400 400Z"
+            d="M40 100 Q70 60 100 40 L100 100 Z"
             fill="#f97316"
-            className="drop-shadow-lg"
+            opacity="0.9"
           />
         </svg>
       </div>
