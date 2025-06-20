@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, SunMoon } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -89,12 +89,12 @@ const Header = () => {
   }, [lastScrollY]);
 
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-    scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
+    scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-3 md:py-4'
   } ${
     isVisible ? 'translate-y-0' : '-translate-y-full'
   }`}>
       <div className="container-custom section-padding">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between min-h-[48px] md:min-h-[56px]">
           {/* Logo */}
           <motion.div initial={{
           opacity: 0,
@@ -104,11 +104,18 @@ const Header = () => {
           x: 0
         }} transition={{
           duration: 0.5
-        }} className="flex items-center space-x-2 md:space-x-3 -ml-2 md:ml-0">
-            <img src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" alt="Om Erresos Logo" style={{
-            filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))'
-          }} className="h-7 w-auto md:h-10 drop-shadow-lg" />
-            <span className={`font-heading font-semibold text-base md:text-xl ${scrolled ? 'text-gray-900' : 'text-gray-800'}`}>
+        }} className="flex items-center space-x-2 md:space-x-3 -ml-1 md:ml-0">
+            <img 
+              src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
+              alt="Om Erresos Logo" 
+              style={{
+                filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))'
+              }} 
+              className="h-6 w-auto md:h-10 drop-shadow-lg" 
+              loading="eager"
+              decoding="async"
+            />
+            <span className={`font-heading font-semibold text-sm md:text-xl ${scrolled ? 'text-gray-900' : 'text-gray-800'}`}>
               ERESSOS
             </span>
           </motion.div>
@@ -150,8 +157,8 @@ const Header = () => {
 
           {/* Language Toggle & Mobile Menu */}
           <div className="flex items-center space-x-2 md:space-x-4">
-            <Button variant="outline" size="sm" onClick={toggleLanguage} className={`flex items-center space-x-1 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-800'} shadow-sm`}>
-              <Globe className="w-4 h-4" />
+            <Button variant="outline" size="sm" onClick={toggleLanguage} className={`flex items-center space-x-1 px-2 py-1 text-xs md:text-sm ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-800'} shadow-sm`}>
+              <Globe className="w-3 h-3 md:w-4 md:h-4" />
               <span className="uppercase font-medium">{language}</span>
             </Button>
 
@@ -161,12 +168,12 @@ const Header = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05 }} 
                   whileTap={{ scale: 0.95 }} 
-                  className={`md:hidden p-2 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800'} rounded-md shadow-sm`}
+                  className={`md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800'} rounded-md shadow-sm`}
                   onClick={() => {
                     console.log('Mobile menu button clicked, current state:', isMenuOpen);
                   }}
                 >
-                  {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                  {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </motion.button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80 bg-gradient-to-br from-white/95 to-primary/5 backdrop-blur-xl border-l border-primary/20">
