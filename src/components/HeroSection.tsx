@@ -3,6 +3,7 @@ import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
+
 const HeroSection = () => {
   const {
     t
@@ -21,6 +22,17 @@ const HeroSection = () => {
         
         <div className="absolute bottom-20 right-10 w-24 h-24 border border-gray-300/30 rounded-full"></div>
         <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
+      </div>
+
+      {/* Orange curved background effect */}
+      <div className="absolute bottom-0 right-0 w-96 h-96 opacity-80">
+        <svg viewBox="0 0 400 400" className="w-full h-full">
+          <path
+            d="M400 400L400 200Q400 100 300 100Q200 100 200 200L400 400Z"
+            fill="#f97316"
+            className="drop-shadow-lg"
+          />
+        </svg>
       </div>
 
       <div className="container-custom section-padding relative z-10 flex-1 flex items-center">
