@@ -3,19 +3,22 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { featuredActivity } from '@/data/activitiesData';
 import { Calendar, MapPin, Target, Clock } from 'lucide-react';
-
 const FeaturedActivity = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const IconComponent = featuredActivity.icon;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
-      className="bg-gradient-to-br from-primary/10 to-nature-mint p-6 rounded-2xl shadow-lg border border-primary/20"
-    >
+  return <motion.div initial={{
+    opacity: 0,
+    y: 30
+  }} whileInView={{
+    opacity: 1,
+    y: 0
+  }} transition={{
+    duration: 0.7
+  }} viewport={{
+    once: true
+  }} className="from-primary/10 to-nature-mint p-6 rounded-2xl shadow-lg border border-primary/20 bg-[DCFCE7] bg-green-100/[0.78]">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
         {/* Left Column - Main Content */}
         <div className="lg:col-span-2 space-y-4">
@@ -62,11 +65,7 @@ const FeaturedActivity = () => {
         <div className="space-y-4">
           {/* Image - Made more square */}
           <div className="overflow-hidden rounded-xl shadow-lg">
-            <img
-              src={featuredActivity.image}
-              alt={t(featuredActivity.titleKey)}
-              className="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500"
-            />
+            <img src={featuredActivity.image} alt={t(featuredActivity.titleKey)} className="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Schedule - Made shorter */}
@@ -98,8 +97,6 @@ const FeaturedActivity = () => {
           </div>
         </div>
       </div>
-    </motion.div>
-  );
+    </motion.div>;
 };
-
 export default FeaturedActivity;
