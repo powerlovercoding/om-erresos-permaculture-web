@@ -23,15 +23,20 @@ const HeroSection = () => {
         <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-gray-300/30 rounded-full"></div>
       </div>
 
-      {/* Subtle decorative wave starting from bottom right corner */}
-      <div className="absolute bottom-0 right-0 pointer-events-none" style={{ width: '30vw', height: '15vh' }}>
+      {/* Subtle coral wave in bottom right corner - exact specifications */}
+      <div className="absolute pointer-events-none" style={{ 
+        bottom: '10%', 
+        right: '15%', 
+        width: '15vw', 
+        height: '10vh' 
+      }}>
         <svg 
           viewBox="0 0 100 100" 
           className="w-full h-full" 
           preserveAspectRatio="none"
         >
           <path
-            d="M95 90 Q85 75 75 80 Q65 85 55 82 Q45 79 35 82 Q25 85 15 80 Q8 77 0 80 L0 100 L100 100 Z"
+            d="M100 80 Q85 60 70 65 Q55 70 40 68 Q25 66 10 70 Q5 72 0 75 L0 100 L100 100 Z"
             fill="#F5A992"
             opacity="0.25"
           />
