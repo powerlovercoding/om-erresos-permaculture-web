@@ -1,9 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe, SunMoon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavigationMenu, NavigationMenuList } from '@/components/ui/navigation-menu';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -153,54 +155,68 @@ const Header = () => {
               <span className="uppercase font-medium">{language}</span>
             </Button>
 
-            {/* Mobile Menu Button */}
-            <motion.button whileHover={{
-            scale: 1.05
-          }} whileTap={{
-            scale: 0.95
-          }} className={`md:hidden p-2 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800'} rounded-md shadow-sm`} onClick={() => {
-            console.log('Mobile menu button clicked, current state:', isMenuOpen);
-            setIsMenuOpen(!isMenuOpen);
-          }}>
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </motion.button>
+            {/* Mobile Menu Sheet */}
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <motion.button 
+                  whileHover={{ scale: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
+                  className={`md:hidden p-2 ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800'} rounded-md shadow-sm`}
+                  onClick={() => {
+                    console.log('Mobile menu button clicked, current state:', isMenuOpen);
+                  }}
+                >
+                  {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </motion.button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-80 bg-gradient-to-br from-white/95 to-primary/5 backdrop-blur-xl border-l border-primary/20">
+                <div className="flex flex-col space-y-6 mt-8">
+                  {/* Logo in mobile menu */}
+                  <div className="flex items-center space-x-3 px-2 pb-4 border-b border-primary/20">
+                    <img 
+                      src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
+                      alt="Om Erresos Logo" 
+                      className="h-8 w-auto drop-shadow-lg" 
+                    />
+                    <span className="font-heading font-semibold text-lg text-gray-800">
+                      ERESSOS
+                    </span>
+                  </div>
+
+                  {/* Navigation Items */}
+                  <nav className="space-y-2">
+                    {navItems.map((item, index) => (
+                      <motion.button 
+                        key={item.key}
+                        onClick={() => scrollToSection(item.href)}
+                        className="w-full text-left py-4 px-6 text-gray-800 hover:text-primary transition-all duration-300 hover:bg-primary/10 rounded-xl border border-transparent hover:border-primary/20 backdrop-blur-sm font-medium"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 * index, duration: 0.3 }}
+                        whileHover={{ scale: 1.02, x: 4 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        {t(`nav.${item.key}`)}
+                      </motion.button>
+                    ))}
+                  </nav>
+
+                  {/* Language Toggle in mobile menu */}
+                  <div className="pt-4 border-t border-primary/20">
+                    <Button 
+                      variant="outline" 
+                      onClick={toggleLanguage} 
+                      className="w-full flex items-center justify-center space-x-2 bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary font-medium py-3"
+                    >
+                      <Globe className="w-5 h-5" />
+                      <span className="uppercase">{language}</span>
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && <motion.nav initial={{
-          opacity: 0,
-          height: 0
-        }} animate={{
-          opacity: 1,
-          height: 'auto'
-        }} exit={{
-          opacity: 0,
-          height: 0
-        }} transition={{
-          duration: 0.3,
-          ease: 'easeInOut'
-        }} className="md:hidden border-t border-gray-200 py-4 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-lg mt-3">
-              {navItems.map((item, index) => <motion.div key={item.key} className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary transition-colors duration-200 hover:bg-primary/10 cursor-pointer" initial={{
-            opacity: 0,
-            x: -10
-          }} animate={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            delay: 0.1 * index,
-            duration: 0.3
-          }} onClick={e => {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Mobile nav button clicked:', item.key, item.href);
-            scrollToSection(item.href);
-          }}>
-                  {t(`nav.${item.key}`)}
-                </motion.div>)}
-            </motion.nav>}
-        </AnimatePresence>
       </div>
     </header>;
 };
