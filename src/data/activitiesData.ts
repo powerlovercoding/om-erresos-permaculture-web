@@ -51,14 +51,14 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Recycle,
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
+    image: "/lovable-uploads/e705043f-bd94-4bc7-adbe-e330cbaf42da.png",
     titleKey: 'school.garden.title',
     descriptionKey: 'school.garden.description',
     fullDescriptionKey: 'school.garden.fullDescription'
   },
   {
     icon: Droplets,
-    image: "/lovable-uploads/e705043f-bd94-4bc7-adbe-e330cbaf42da.png",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
     titleKey: 'school.recycling.title',
     descriptionKey: 'school.recycling.description',
     fullDescriptionKey: 'school.recycling.fullDescription'
