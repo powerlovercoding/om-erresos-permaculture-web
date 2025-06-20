@@ -37,9 +37,7 @@ const HeroSection = () => {
         }} className="space-y-6">
             <div className="flex items-center space-x-2 text-nature-leaf mt-8 md:mt-0">
               <Leaf className="w-6 h-6" />
-              <span className="text-sm font-medium uppercase tracking-wider">
-                PROJECT
-              </span>
+              <span className="text-sm font-medium uppercase tracking-wider">Youth led projects against climate change</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-gray-800">
