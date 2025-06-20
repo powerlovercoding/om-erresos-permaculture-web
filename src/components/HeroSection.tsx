@@ -46,7 +46,7 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
               <span className="text-gray-900">{t('hero.title').split(' ').slice(0, 2).join(' ')}</span>
               <br />
-              <span className="text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text">
+              <span className="text-transparent bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text">
                 {t('hero.title').split(' ').slice(2).join(' ')}
               </span>
             </h1>
@@ -63,7 +63,7 @@ const HeroSection = () => {
               <Button 
                 onClick={scrollToAbout} 
                 size="lg" 
-                className="text-white hover:bg-green-700 px-8 py-3 text-lg font-semibold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="text-white hover:bg-amber-700 px-8 py-3 text-lg font-semibold bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {t('hero.cta')}
               </Button>
