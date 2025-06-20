@@ -88,66 +88,54 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-    scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-3 md:py-4'
-  } ${
-    isVisible ? 'translate-y-0' : '-translate-y-full'
-  }`}>
-      <div className="container-custom section-padding">
-        <div className="flex items-center justify-between min-h-[48px] md:min-h-[56px]">
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
+      scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-3 md:py-4'
+    } ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
+      <div className="w-full max-w-none px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between min-h-[48px] md:min-h-[56px] w-full">
           {/* Logo */}
-          <motion.div initial={{
-          opacity: 0,
-          x: -20
-        }} animate={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 0.5
-        }} className="flex items-center space-x-2 md:space-x-3 -ml-1 md:ml-0">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.5 }} 
+            className="flex items-center space-x-2 md:space-x-3 flex-shrink-0"
+          >
             <img 
               src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
               alt="Om Erresos Logo" 
               style={{
                 filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))'
               }} 
-              className="h-6 w-auto md:h-10 drop-shadow-lg" 
+              className="h-6 w-auto md:h-10 drop-shadow-lg flex-shrink-0" 
               loading="eager"
               decoding="async"
             />
-            <span className={`font-heading font-semibold text-sm md:text-xl ${scrolled ? 'text-gray-900' : 'text-gray-800'}`}>
+            <span className={`font-heading font-semibold text-sm md:text-xl whitespace-nowrap ${
+              scrolled ? 'text-gray-900' : 'text-gray-800'
+            }`}>
               ERESSOS
             </span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden md:block">
+          <NavigationMenu className="hidden md:block flex-shrink-0">
             <NavigationMenuList className="flex items-center space-x-2">
               {navItems.map((item, index) => (
                 <motion.button 
                   key={item.key} 
                   onClick={() => scrollToSection(item.href)} 
-                  className={`transition-all duration-200 font-medium relative px-4 py-2 rounded-lg border-2 ${
+                  className={`transition-all duration-200 font-medium relative px-4 py-2 rounded-lg border-2 whitespace-nowrap ${
                     scrolled 
                       ? 'text-gray-800 hover:text-primary border-gray-300 hover:border-primary bg-white/50 hover:bg-primary/10' 
                       : 'text-gray-800 hover:text-primary border-gray-400 hover:border-primary bg-white/70 hover:bg-white/90'
                   } backdrop-blur-sm shadow-sm`} 
-                  initial={{
-                    opacity: 0,
-                    y: -10
-                  }} 
-                  animate={{
-                    opacity: 1,
-                    y: 0
-                  }} 
-                  transition={{
-                    duration: 0.3,
-                    delay: 0.1 * index
-                  }} 
-                  whileHover={{
-                    scale: 1.05,
-                    y: -2
-                  }}
+                  initial={{ opacity: 0, y: -10 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  transition={{ duration: 0.3, delay: 0.1 * index }} 
+                  whileHover={{ scale: 1.05, y: -2 }}
                 >
                   {t(`nav.${item.key}`)}
                 </motion.button>
@@ -156,9 +144,18 @@ const Header = () => {
           </NavigationMenu>
 
           {/* Language Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-2 md:space-x-4">
-            <Button variant="outline" size="sm" onClick={toggleLanguage} className={`flex items-center space-x-1 px-2 py-1 text-xs md:text-sm ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-800'} shadow-sm`}>
-              <Globe className="w-3 h-3 md:w-4 md:h-4" />
+          <div className="flex items-center space-x-2 md:space-x-4 flex-shrink-0">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={toggleLanguage} 
+              className={`flex items-center space-x-1 px-2 py-1 text-xs md:text-sm whitespace-nowrap ${
+                scrolled 
+                  ? 'bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-primary/10 text-primary' 
+                  : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-800'
+              } shadow-sm`}
+            >
+              <Globe className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
               <span className="uppercase font-medium">{language}</span>
             </Button>
 
@@ -168,7 +165,11 @@ const Header = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05 }} 
                   whileTap={{ scale: 0.95 }} 
-                  className={`md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center ${scrolled ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' : 'bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800'} rounded-md shadow-sm`}
+                  className={`md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center flex-shrink-0 ${
+                    scrolled 
+                      ? 'bg-white/50 backdrop-blur-sm border border-primary/20 text-primary' 
+                      : 'bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800'
+                  } rounded-md shadow-sm`}
                   onClick={() => {
                     console.log('Mobile menu button clicked, current state:', isMenuOpen);
                   }}
@@ -176,14 +177,14 @@ const Header = () => {
                   {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </motion.button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80 bg-gradient-to-br from-white/95 to-primary/5 backdrop-blur-xl border-l border-primary/20">
-                <div className="flex flex-col space-y-6 mt-8">
+              <SheetContent side="right" className="w-80 max-w-[85vw] bg-gradient-to-br from-white/95 to-primary/5 backdrop-blur-xl border-l border-primary/20">
+                <div className="flex flex-col space-y-6 mt-8 h-full overflow-y-auto">
                   {/* Logo in mobile menu */}
                   <div className="flex items-center space-x-3 px-2 pb-4 border-b border-primary/20">
                     <img 
                       src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
                       alt="Om Erresos Logo" 
-                      className="h-8 w-auto drop-shadow-lg" 
+                      className="h-8 w-auto drop-shadow-lg flex-shrink-0" 
                     />
                     <span className="font-heading font-semibold text-lg text-gray-800">
                       ERESSOS
@@ -209,7 +210,7 @@ const Header = () => {
                   </nav>
 
                   {/* Language Toggle in mobile menu */}
-                  <div className="pt-4 border-t border-primary/20">
+                  <div className="pt-4 border-t border-primary/20 mt-auto">
                     <Button 
                       variant="outline" 
                       onClick={toggleLanguage} 
@@ -225,7 +226,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
 
 export default Header;
