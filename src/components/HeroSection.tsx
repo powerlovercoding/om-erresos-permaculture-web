@@ -34,7 +34,7 @@ const HeroSection = () => {
           >
             <div className="flex items-center space-x-2 text-nature-leaf mt-8 md:mt-0">
               <Leaf className="w-6 h-6 text-green-600" />
-              <span className="text-sm font-medium uppercase tracking-wider text-green-700 bg-green-100 px-3 py-1 rounded-full">
+              <span className="text-sm font-medium uppercase tracking-wider text-green-700">
                 Youth led projects against climate change
               </span>
             </div>
