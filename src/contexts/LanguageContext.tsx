@@ -20,7 +20,7 @@ const translations = {
     // Hero
     'hero.title': 'Νέοι για το Κλίμα στη Λέσβο',
     'hero.subtitle': 'Μια Νέα γενιά για το κλίμα με γνώση, φαντασία και φροντίδα',
-    'hero.description': 'Ανακαλύψτε πως συνδιάζοντας πρακτικές βιωσιμότητας, όπως η αναγεννητική καλλιέργεια, η ανακύκλωση και η επαναχρησιμοποίηση και με συλλογικές δράσεις προσπαθούμε να ενδυναμώσουμε τη νεολαία την κοινότητα και το περιβάλλον μας.',
+    'hero.description': 'Ανακαλύψτε πως συνδιάζοντας πρακτικές βιωσιμότητας, όπως η αναγεννητική καλλιέργεια, η ανακύκλωση και η επαναχρησιμοποίηση και με συλλογικές δράσεις προσπαθούμε να ενδυναμώσουμε τη νεολαία της Λέσβου ως φορείς αλλαγής.',
     'hero.cta': 'Μάθετε Περισσότερα',
     
     // About
@@ -32,7 +32,7 @@ const translations = {
     'about.values': 'Αξίες',
     'about.valuesDescription': 'Βιωσιμότητα και κοινοτική δράση',
     'about.method': 'Μέθοδος',
-    'about.methodDescription': 'Πρακτική εκμάθηση permaculture',
+    'about.methodDescription': 'Βιωματική μάθηση και η συμμετοχική δράση',
     
     // Activities
     'activities.title': 'Δραστηριότητες του Προγράμματος',
@@ -138,7 +138,7 @@ const translations = {
     'about.values': 'Values',
     'about.valuesDescription': 'Sustainability and community action',
     'about.method': 'Method',
-    'about.methodDescription': 'Practical permaculture learning',
+    'about.methodDescription': 'Experiential learning and participatory action',
     
     // Activities
     'activities.title': 'Program Activities',
