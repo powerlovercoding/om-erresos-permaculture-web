@@ -23,7 +23,7 @@ const FeaturedActivity = () => {
         {/* Left Column - Main Content */}
         <div className="lg:col-span-2 space-y-4">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-primary rounded-full">
+            <div className="p-2 rounded-full bg-[#548f67]">
               <IconComponent className="w-5 h-5 text-white" />
             </div>
             <span className="text-xs font-semibold uppercase tracking-wider text-[#5d9871]">
