@@ -58,7 +58,7 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Droplets,
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
+    image: "/lovable-uploads/b2239e97-e9ca-408a-958f-62c3c16ed8a7.png",
     titleKey: 'school.recycling.title',
     descriptionKey: 'school.recycling.description',
     fullDescriptionKey: 'school.recycling.fullDescription'
