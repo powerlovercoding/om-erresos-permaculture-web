@@ -42,9 +42,9 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
-              <span className="text-[nature-light-green] text-[#195319]">{t('hero.title').split(' ').slice(0, 2).join(' ')}</span>
+              <span className="text-[nature-light-green] text-[#6e734b]">{t('hero.title').split(' ').slice(0, 2).join(' ')}</span>
               <br />
-              <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-slate-800">
+              <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-[#5d623f]">
                 {t('hero.title').split(' ').slice(2).join(' ')}
               </span>
             </h1>
