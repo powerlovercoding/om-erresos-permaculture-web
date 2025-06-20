@@ -27,11 +27,22 @@ const HeroSection = () => {
 
       {/* Orange curved background effect - matching the screenshot */}
       <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
-        <svg viewBox="0 0 100 100" className="absolute bottom-0 right-0 w-1/2 h-full" preserveAspectRatio="none">
+        <svg viewBox="0 0 100 100" className="absolute bottom-0 right-0 w-2/3 h-full" preserveAspectRatio="none">
           <path
-            d="M40 100 Q70 60 100 40 L100 100 Z"
+            d="M20 100 Q50 30 100 0 L100 100 Z"
             fill="#f97316"
-            opacity="0.9"
+            opacity="0.8"
+          />
+        </svg>
+      </div>
+
+      {/* Additional curved layer for more depth */}
+      <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
+        <svg viewBox="0 0 100 100" className="absolute bottom-0 right-0 w-1/2 h-4/5" preserveAspectRatio="none">
+          <path
+            d="M30 100 Q60 40 100 20 L100 100 Z"
+            fill="#ea580c"
+            opacity="0.6"
           />
         </svg>
       </div>
