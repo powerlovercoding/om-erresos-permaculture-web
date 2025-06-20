@@ -26,7 +26,7 @@ const FeaturedActivity = () => {
             <div className="p-2 bg-primary rounded-full">
               <IconComponent className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#5d9871]">
               {t('featured.badge')}
             </span>
           </div>
