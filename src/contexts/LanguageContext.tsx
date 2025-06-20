@@ -26,7 +26,7 @@ const translations = {
     // About
     'about.title': 'Σκοπός & Περιγραφή του Προγράμματος',
     'about.description': 'Μέσα από βιωματικά εργαστήρια, εκπαιδευτικές επισκέψεις και δημιουργικές δράσεις, καλλιεργούμε την οικολογική συνείδηση και ενδυναμώνουμε τους νέους της Λέσβου ως φορείς αλλαγής. Τους δίνουμε τα εργαλεία να εκφραστούν, να συνεργαστούν και να δημιουργήσουν ένα πιο ανθεκτικό και συνειδητοποιημένο μέλλον.',
-    'about.mission': 'Η αποστολή μας είναι να ενδυναμώσουμε τη νεολαία με γνώσεις και εργαλεία για την αντιμετώπιση των κλιματικών προκλήσεων μέσω πρακτικών και βιώσιμων μεθόδων.',
+    'about.mission': 'Το πρόγραμμα περιέχει δράσεις όπως ανακύκλωση, κομποστοποίηση, θεματικά εργαστήρια σε σχολεία, δημιουργία κοινοτικών κήπων και καλλιτεχνικές δημιουργίες με επίκεντρο το περιβάλλον. Μέσα από τη γνώση, τη συνεργασία και την πράξη, καλλιεργεί ένα δίκτυο ενεργών πολιτών που αναλαμβάνουν ρόλο στη βιώσιμη αλλαγή.',
     'about.goal': 'Στόχος',
     'about.goalDescription': 'Ευαισθητοποίηση νέων για το κλίμα',
     'about.values': 'Αξίες',
@@ -132,7 +132,7 @@ const translations = {
     // About
     'about.title': 'Program Purpose & Description',
     'about.description': 'Through experiential workshops, educational visits and creative actions, we cultivate ecological awareness and empower the youth of Lesvos as agents of change. We give them the tools to express themselves, collaborate and create a more resilient and conscious future.',
-    'about.mission': 'Our mission is to empower youth with knowledge and tools to address climate challenges through practical and sustainable methods.',
+    'about.mission': 'The program includes activities such as recycling, composting, thematic workshops in schools, creating community gardens and artistic creations focused on the environment. Through knowledge, collaboration and action, it cultivates a network of active citizens who take on a role in sustainable change.',
     'about.goal': 'Goal',
     'about.goalDescription': 'Climate awareness for youth',
     'about.values': 'Values',
