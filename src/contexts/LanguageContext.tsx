@@ -36,7 +36,7 @@ const translations = {
     
     // Activities
     'activities.title': 'Δραστηριότητες του Προγράμματος',
-    'activities.community.title': 'Community Δραστηριότητες',
+    'activities.community.title': 'Δραστηριότητες με την κοινότητα',
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
     
