@@ -1,28 +1,35 @@
+
 import React from 'react';
 import { MapPin, Phone, Mail, Globe, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
+
 const ContactSection = () => {
-  const {
-    t
-  } = useLanguage();
-  const contactInfo = [{
-    icon: MapPin,
-    label: t('contact.address'),
-    value: `${t('contact.location')}, 81105, ${t('contact.country')}`,
-    link: 'https://maps.google.com'
-  }, {
-    icon: Phone,
-    label: t('contact.phone'),
-    value: '+30 22530 53000',
-    link: 'tel:+302253053000'
-  }, {
-    icon: Mail,
-    label: t('contact.email'),
-    value: 'info@omerresos.gr',
-    link: 'mailto:info@omerresos.gr'
-  }];
-  return <section id="contact" className="py-20 bg-gray-50">
+  const { t } = useLanguage();
+
+  const contactInfo = [
+    {
+      icon: MapPin,
+      label: t('contact.address'),
+      value: `${t('contact.location')}, 81105, ${t('contact.country')}`,
+      link: 'https://maps.google.com'
+    },
+    {
+      icon: Phone,
+      label: t('contact.phone'),
+      value: '+30 22530 53000',
+      link: 'tel:+302253053000'
+    },
+    {
+      icon: Mail,
+      label: t('contact.email'),
+      value: 'info@omerresos.gr',
+      link: 'mailto:info@omerresos.gr'
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="container-custom section-padding">
         <motion.div initial={{
         opacity: 0,
@@ -89,19 +96,19 @@ const ContactSection = () => {
           </motion.div>
 
           {/* Map / Image */}
-          <motion.div initial={{
-          opacity: 0,
-          x: 50
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 0.8
-        }} viewport={{
-          once: true
-        }} className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className="relative"
+          >
             <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop" alt="Lesvos landscape" className="w-full h-full object-cover" />
+              <img 
+                src="/lovable-uploads/54626974-9505-406d-ba4c-0f5acac0b622.png" 
+                alt="Coastal village illustration of Lesvos" 
+                className="w-full h-full object-cover" 
+              />
               <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
                 <div className="text-center text-white">
                   <MapPin className="w-12 h-12 mx-auto mb-2" />
@@ -134,6 +141,8 @@ const ContactSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ContactSection;
