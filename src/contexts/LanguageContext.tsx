@@ -35,7 +35,7 @@ const translations = {
     'about.methodDescription': 'Βιωματική μάθηση και η συμμετοχική δράση',
     
     // Activities
-    'activities.title': 'Δραστηριότητες του Προγράμματος',
+    'activities.title': 'Οι δράσεις μας',
     'activities.community.title': 'Δραστηριότητες με την κοινότητα',
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
@@ -75,8 +75,8 @@ const translations = {
     'school.upcycling.fullDescription': 'Μαθητές γυμνασίου και λυκείου μαθαίνουν βασικές δεξιότητες ραπτικής και μετατρέπουν παλιά ρούχα σε χρήσιμα αντικείμενα. Το εργαστήριο ενισχύει τη δημιουργικότητα, τη συνεργασία και την οικολογική συνείδηση των εφήβων.',
     
     // Featured Activity
-    'activities.featured.title': 'Κεντρική Δραστηριότητα',
-    'featured.badge': 'Ειδική Δράση',
+    'activities.featured.title': 'Εισήγηση',
+    'featured.badge': 'Εισήγηση στο πολιτισμικό κέντρο',
     'featured.climate.title': 'Η Κλιματική Κρίση στο Νησί μας',
     'featured.climate.description': 'Μια ολοήμερη δράση ευαισθητοποίησης γύρω από την κλιματική κρίση, τις επιπτώσεις της στη Λέσβο και τις συλλογικές απαντήσεις που μπορούμε να δώσουμε. Μέσα από θεωρητικές παρουσιάσεις, διάλογο, συλλογικό γεύμα και συμμετοχικό σχεδιασμό δράσεων, καλλιεργούμε τη γνώση, την αλληλεγγύη και την περιβαλλοντική ευθύνη.',
     'featured.climate.date': 'Σάββατο 28 Ιουνίου',
@@ -141,7 +141,7 @@ const translations = {
     'about.methodDescription': 'Experiential learning and participatory action',
     
     // Activities
-    'activities.title': 'Program Activities',
+    'activities.title': 'Our Actions',
     'activities.community.title': 'Community Activities',
     'activities.school.title': 'School Activities',
     'activities.readMore': 'Read more',
@@ -181,8 +181,8 @@ const translations = {
     'school.upcycling.fullDescription': 'Middle and high school students learn basic sewing skills and transform old clothes into useful objects. The workshop enhances creativity, collaboration and ecological awareness of teenagers.',
     
     // Featured Activity
-    'activities.featured.title': 'Featured Activity',
-    'featured.badge': 'Special Action',
+    'activities.featured.title': 'Presentation',
+    'featured.badge': 'Presentation at the Cultural Center',
     'featured.climate.title': 'The Climate Crisis on Our Island',
     'featured.climate.description': 'A full-day awareness action around the climate crisis, its impacts on Lesvos and the collective responses we can give. Through theoretical presentations, dialogue, collective meal and participatory action planning, we cultivate knowledge, solidarity and environmental responsibility.',
     'featured.climate.date': 'Saturday, June 28',
