@@ -45,14 +45,12 @@ const Footer = () => {
             {t('footer.partners')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {partnerLogos.map((partner, index) => <div key={index} className="flex items-center justify-center p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                <div className="w-24 h-16 flex items-center justify-center">
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name}
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
+            {partnerLogos.map((partner, index) => <div key={index} className="flex items-center justify-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors min-h-[120px]">
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name}
+                  className="w-full h-full max-w-[200px] max-h-[80px] object-contain"
+                />
               </div>)}
           </div>
         </div>
