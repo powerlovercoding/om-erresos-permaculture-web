@@ -35,7 +35,7 @@ const translations = {
     'about.methodDescription': 'Βιωματική μάθηση και η συμμετοχική δράση',
     
     // Activities
-    'activities.title': 'Οι δράσεις μας',
+    'activities.title': 'Οι δρασεις μας',
     'activities.community.title': 'Δραστηριότητες με την κοινότητα',
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
@@ -157,13 +157,13 @@ const translations = {
     'community.compost.description': 'With sustainable cultivation principles and permaculture techniques, we create a community ecosystem.',
     'community.compost.fullDescription': 'With sustainable cultivation principles and permaculture techniques, we create a community ecosystem. Young people learn to collaborate with nature and cultivate nutritional self-sufficiency, transforming an abandoned space into a source of life.',
     
-    // School Activities - English translations with new content
+    // School Activities - English translations with updated content
     'school.education.title': 'Green School',
-    'school.education.description': 'The compost we carefully made returns to the General Lyceum of Antissa.',
-    'school.education.fullDescription': 'The compost we carefully made returns to the General Lyceum of Antissa. In autumn, together with students and teachers, we plant 15 trees and place benches, transforming the courtyard into a space for rest and ecological awareness.',
+    'school.education.description': 'The compost we carefully made returns to the General high school of Antissa.',
+    'school.education.fullDescription': 'The compost we carefully made returns to the General high school of Antissa. In autumn, together with students and teachers, we plant 15 trees and place benches, transforming the courtyard into a space for rest and ecological awareness.',
     'school.garden.title': 'Plastic Recycling',
-    'school.garden.description': 'The Experimental Lyceum of Mytilene hosts a 3-day workshop on recycling plastic caps, where refugees transform waste into useful objects.',
-    'school.garden.fullDescription': 'The Experimental Lyceum of Mytilene hosts a 3-day workshop on recycling plastic caps, where refugees transform waste into useful objects. The action is accompanied by information about the effects of plastic on nature, aiming to raise student awareness. In collaboration with the NGO "Stand by Me Lesvos" & the association "Lesvos Without Plastics".',
+    'school.garden.description': 'The Experimental high school of Mytilene hosts a 3-day workshop on recycling plastic caps, where refugees transform waste into useful objects.',
+    'school.garden.fullDescription': 'The Experimental high school of Mytilene hosts a 3-day workshop on recycling plastic caps, where refugees transform waste into useful objects. The action is accompanied by information about the effects of plastic on nature, aiming to raise student awareness. In collaboration with the NGO "Stand by Me Lesvos" & the association "Lesvos Plastic Free".',
     'school.recycling.title': 'Water Recycling and Wastewater Treatment',
     'school.recycling.description': 'The Lyceum of Kalloni visits the experimental space HYDRO1 to learn how wastewater is converted into irrigation water.',
     'school.recycling.fullDescription': 'The Lyceum of Kalloni visits the experimental space HYDRO1 to learn how wastewater is converted into irrigation water. Then, at HYDRO2, they observe in practice the irrigation of an agroforestry system with the treated water. Collaboration with the University of the Aegean & the Horizon2020 project "Hydrousa".',
