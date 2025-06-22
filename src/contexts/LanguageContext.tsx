@@ -76,7 +76,7 @@ const translations = {
     
     // Featured Activity
     'activities.featured.title': 'Εισήγηση',
-    'featured.badge': 'Εισήγηση στο πολιτισμικό κέντρο',
+    'featured.badge': 'Είσήγηση στο πολιτισμικό κέντρο',
     'featured.climate.title': 'Η Κλιματική Κρίση στο Νησί μας',
     'featured.climate.description': 'Μια ολοήμερη δράση ευαισθητοποίησης γύρω από την κλιματική κρίση, τις επιπτώσεις της στη Λέσβο και τις συλλογικές απαντήσεις που μπορούμε να δώσουμε. Μέσα από θεωρητικές παρουσιάσεις, διάλογο, συλλογικό γεύμα και συμμετοχικό σχεδιασμό δράσεων, καλλιεργούμε τη γνώση, την αλληλεγγύη και την περιβαλλοντική ευθύνη.',
     'featured.climate.date': 'Σάββατο 28 Ιουνίου',
@@ -123,9 +123,9 @@ const translations = {
     'nav.activities': 'Activities',
     'nav.contact': 'Contact',
     
-    // Hero
-    'hero.title': 'Youth for Climate in Lesvos',
-    'hero.subtitle': 'A New Generation for Climate with Knowledge, Imagination and Care',
+    // Hero - Updated English translations
+    'hero.title': 'Youth-coordinated actions for climate change in Lesvos',
+    'hero.subtitle': 'A New Generation with Knowledge, Imagination and Care',
     'hero.description': 'Discover how by combining sustainability practices, such as regenerative agriculture, recycling and reuse, and through collective actions, we strive to empower youth, community and our environment.',
     'hero.cta': 'Learn More',
     
@@ -195,9 +195,9 @@ const translations = {
     'featured.climate.goalTitle': 'Action Goal',
     'featured.climate.goal': 'The goal of the action is to activate the local community and give voice to those who want to become part of the solution. Through knowledge and collective action, we build resilient communities in the face of the climate challenge.',
     
-    // Contact
+    // Contact - Updated English translation
     'contact.title': 'Contact Information',
-    'contact.subtitle': 'Contact us for more information about the "Youth for Climate in Lesvos" program.',
+    'contact.subtitle': 'Contact us for more information about the "Youth-coordinated actions for climate change in Lesvos" program.',
     'contact.address': 'Address',
     'contact.phone': 'Phone',
     'contact.email': 'Email', 
