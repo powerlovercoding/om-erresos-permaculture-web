@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MapPin, Phone, Mail, Globe, Clock } from 'lucide-react';
+import { MapPin, Mail, Globe, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 
@@ -12,19 +12,13 @@ const ContactSection = () => {
       icon: MapPin,
       label: t('contact.address'),
       value: `${t('contact.location')}, 81105, ${t('contact.country')}`,
-      link: 'https://maps.google.com'
-    },
-    {
-      icon: Phone,
-      label: t('contact.phone'),
-      value: '+30 22530 53000',
-      link: 'tel:+302253053000'
+      link: 'https://maps.google.com/?q=Eressos,Lesvos,Greece'
     },
     {
       icon: Mail,
       label: t('contact.email'),
       value: 'om.eressos@gmail.com',
-      link: 'mailto:om.eressos@gmail.com'
+      link: 'https://mail.google.com/mail/?view=cm&fs=1&to=om.eressos@gmail.com'
     }
   ];
 
@@ -86,7 +80,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{item.label}</h4>
-                      <a href={item.link} target={item.icon === Globe || item.icon === MapPin ? "_blank" : undefined} rel={item.icon === Globe || item.icon === MapPin ? "noopener noreferrer" : undefined} className="text-gray-600 hover:text-primary transition-colors">
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
                         {item.value}
                       </a>
                     </div>
