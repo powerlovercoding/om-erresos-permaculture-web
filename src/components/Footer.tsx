@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -45,11 +46,11 @@ const Footer = () => {
             {t('footer.partners')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {partnerLogos.map((partner, index) => <div key={index} className="flex items-center justify-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors min-h-[120px]">
+            {partnerLogos.map((partner, index) => <div key={index} className="flex items-center justify-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors min-h-[160px]">
                 <img 
                   src={partner.logo} 
                   alt={partner.name}
-                  className="w-full h-full max-w-[200px] max-h-[80px] object-contain"
+                  className="w-full h-full max-w-[300px] max-h-[120px] object-contain"
                 />
               </div>)}
           </div>
