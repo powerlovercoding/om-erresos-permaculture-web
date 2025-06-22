@@ -1,23 +1,25 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+
 const Footer = () => {
   const {
     t
   } = useLanguage();
-  const partnerLogos = [{
-    name: 'EU',
-    logo: 'EU'
-  }, {
-    name: 'Ministry',
-    logo: 'MIN'
-  }, {
-    name: 'University',
-    logo: 'UNI'
-  }, {
-    name: 'NGO',
-    logo: 'NGO'
-  }];
+  const partnerLogos = [
+    {
+      name: 'Municipality of West Lesvos',
+      logo: '/lovable-uploads/14233595-7b47-43b0-8ea8-55956df06e33.png'
+    },
+    {
+      name: 'Partner Organization 2',
+      logo: '/lovable-uploads/6b8345ed-d409-4218-96a0-68d8c09c750a.png'
+    },
+    {
+      name: 'Partner Organization 3', 
+      logo: '/lovable-uploads/8dd8608e-2d58-443d-ac43-a2b5dd6f3ec3.png'
+    }
+  ];
   const socialLinks = [{
     icon: Facebook,
     href: '#',
@@ -42,10 +44,14 @@ const Footer = () => {
           <h3 className="text-xl font-heading font-semibold text-center mb-8">
             {t('footer.partners')}
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {partnerLogos.map((partner, index) => <div key={index} className="flex items-center justify-center p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">{partner.logo}</span>
+                <div className="w-24 h-16 flex items-center justify-center">
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
               </div>)}
           </div>
@@ -125,4 +131,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
