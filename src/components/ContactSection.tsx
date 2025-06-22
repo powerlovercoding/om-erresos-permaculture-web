@@ -23,8 +23,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: t('contact.email'),
-      value: 'info@omerresos.gr',
-      link: 'mailto:info@omerresos.gr'
+      value: 'om.eressos@gmail.com',
+      link: 'mailto:om.eressos@gmail.com'
     }
   ];
 
