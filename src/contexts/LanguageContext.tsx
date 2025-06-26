@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'el' | 'en';
@@ -36,7 +35,7 @@ const translations = {
     'about.methodDescription': 'Βιωματική μάθηση και η συμμετοχική δράση',
     
     // Activities
-    'activities.title': 'Οι δρασεις μας',
+    'activities.title': 'Οι δράσεις μας',
     'activities.community.title': 'Δραστηριότητες με την κοινότητα',
     'activities.school.title': 'Σχολικές Δραστηριότητες',
     'activities.readMore': 'Διαβάστε περισσότερα',
