@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'el' | 'en';
@@ -112,7 +113,7 @@ const translations = {
     'footer.rights': 'Όλα τα δικαιώματα διατηρούνται',
     'footer.privacy': 'Πολιτική Απορρήτου',
     'footer.terms': 'Όροι Χρήσης',
-    'footer.description': 'Δημιουργώντας ένα βιώσιμο μέλλον για τη Λέσβο μέσω της permaculture και της περιβαλλοντικής εκπαίδευσης.',
+    'footer.description': 'Δημιουργώντας ένα βιώσιμο μέλλον για τη Λέσβο μέσω της περιβαλλοντικής εκπαίδευσης.',
     'footer.quickLinks': 'Γρήγοροι Σύνδεσμοι',
     'footer.aboutUs': 'Σχετικά με εμάς',
     'footer.contact': 'Επικοινωνία'
@@ -218,7 +219,7 @@ const translations = {
     'footer.rights': 'All rights reserved',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
-    'footer.description': 'Creating a sustainable future for Lesvos through permaculture and environmental education.',
+    'footer.description': 'Creating a sustainable future for Lesvos through environmental education.',
     'footer.quickLinks': 'Quick Links',
     'footer.aboutUs': 'About Us',
     'footer.contact': 'Contact'
