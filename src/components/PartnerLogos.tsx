@@ -21,7 +21,7 @@ const PartnerLogos = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-50 py-16">
       <div className="container-custom section-padding">
         <h3 className="text-xl font-heading font-semibold text-center mb-8 text-gray-900">
           {t('footer.partners')}
