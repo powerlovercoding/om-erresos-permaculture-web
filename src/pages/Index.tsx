@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ActivitiesSection from '@/components/ActivitiesSection';
 import ContactSection from '@/components/ContactSection';
+import PartnerLogos from '@/components/PartnerLogos';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
           <ActivitiesSection />
           <ContactSection />
         </main>
+        <PartnerLogos />
         <Footer />
       </div>
     </LanguageProvider>
