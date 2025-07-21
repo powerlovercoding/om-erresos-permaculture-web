@@ -44,7 +44,7 @@ const translations = {
     // Community Activities
     'community.workshop.title': 'Καθαρίζουμε και Δημιουργούμε',
     'community.workshop.description': 'Μια δράση με ουσία: συγκεντρωνόμαστε για να καθαρίσουμε την παραλία και να μετατρέψουμε τα απορρίμματα σε έργα τέχνης.',
-    'community.workshop.fullDescription': 'Μια δράση με ουσία: συγκεντρωνόμαστε για να καθαρίσουμε την παραλία και να μετατρέψουμε τα απορρίμματα σε έργα τέχνης. Μέσα από μια δημιουργική διαμαρτυρία, στέλνουμε ένα δυνατό μήνυμα για την προστασία του περιβάλλοντος. Δευτέρα 28 Ιουλίου | 18:00 | Κάμπινγκ Σκάλας Ερεσού (πίσω από την καντίνα "Χελώνα").',
+    'community.workshop.fullDescription': 'Μια δράση με ουσία: συγκεντρωνόμαστε για να καθαρίσουμε την παραλία και να μετατρέψουμε τα απορρίμματα σε έργα τέχνης. Μέσα από μια δημιουργική διαμαρτυρία, στέλνουμε ένα δυνατό μήνυμα για την προστασία του περιβάλλοντος. Τρίτη 5 Αυγούστου | 18:00 | Κάμπινγκ Σκάλας Ερεσού (πίσω από την καντίνα "Χελώνα").',
     'community.garden.title': 'Από το Πιάτο στο Χώμα',
     'community.garden.description': 'Μια συνεργασία με καταστήματα εστίασης στη Σκάλα Ερεσού, όπου ερευνούμε τις πρακτικές διαχείρισης οργανικών αποβλήτων.',
     'community.garden.fullDescription': 'Μια συνεργασία με καταστήματα εστίασης στη Σκάλα Ερεσού, όπου ερευνούμε τις πρακτικές διαχείρισης οργανικών αποβλήτων. Κατά τη διάρκεια του καλοκαιριού, συλλέγουμε υπολείμματα τροφών και τα μετατρέπουμε σε κομπόστ στον πειραματικό μας αγρό. Ένα βήμα προς έναν κύκλο ζωής χωρίς απόβλητα.',
@@ -150,7 +150,7 @@ const translations = {
     // Community Activities
     'community.workshop.title': 'We Clean and Create',
     'community.workshop.description': 'A meaningful action: we gather to clean the beach and transform waste into works of art.',
-    'community.workshop.fullDescription': 'A meaningful action: we gather to clean the beach and transform waste into works of art. Through a creative protest, we send a powerful message for environmental protection. Monday, July 28 | 6:00 PM | Skala Eressos Camping (behind the "Turtle" canteen).',
+    'community.workshop.fullDescription': 'A meaningful action: we gather to clean the beach and transform waste into works of art. Through a creative protest, we send a powerful message for environmental protection. Tuesday, August 5 | 6:00 PM | Skala Eressos Camping (behind the "Turtle" canteen).',
     'community.garden.title': 'From Plate to Soil',
     'community.garden.description': 'A collaboration with restaurants in Skala Eressos, where we explore organic waste management practices.',
     'community.garden.fullDescription': 'A collaboration with restaurants in Skala Eressos, where we explore organic waste management practices. During the summer, we collect food scraps and transform them into compost in our experimental farm. A step towards a zero-waste life cycle.',
