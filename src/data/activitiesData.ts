@@ -20,14 +20,14 @@ export const featuredActivity: Activity = {
 export const communityActivities: Activity[] = [
   {
     icon: Recycle,
-    image: "/lovable-uploads/1a3aaf06-22e5-4a0c-a69b-f610d18a8845.png",
+    image: "/lovable-uploads/beach-clean-and-art.png",
     titleKey: 'community.workshop.title',
     descriptionKey: 'community.workshop.description',
     fullDescriptionKey: 'community.workshop.fullDescription'
   },
   {
     icon: Sprout,
-    image: "/lovable-uploads/06d6dd19-2473-461e-92e2-f52d30cd0cbc.png",
+    image: "/lovable-uploads/from-plate-to-soil.png",
     titleKey: 'community.garden.title',
     descriptionKey: 'community.garden.description',
     fullDescriptionKey: 'community.garden.fullDescription'
