@@ -65,28 +65,28 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Users,
-    image: "/lovable-uploads/a2d6ed54-8300-4822-bf8f-a49d8aea7eac.png",
+    image: "/lovable-uploads/tree-wild.png",
     titleKey: 'school.climate.title',
     descriptionKey: 'school.climate.description',
     fullDescriptionKey: 'school.climate.fullDescription'
   },
   {
     icon: Sprout,
-    image: "/lovable-uploads/2a7045c0-a506-4917-b461-a0a5060116a9.png",
+    image: "/lovable-uploads/green-seeds.png",
     titleKey: 'school.biodiversity.title',
     descriptionKey: 'school.biodiversity.description',
     fullDescriptionKey: 'school.biodiversity.fullDescription'
   },
   {
     icon: Zap,
-    image: "/lovable-uploads/72ba4d86-c815-409a-af6b-540f24fd6e20.png",
+    image: "/lovable-uploads/theatre-play.png",
     titleKey: 'school.sustainability.title',
     descriptionKey: 'school.sustainability.description',
     fullDescriptionKey: 'school.sustainability.fullDescription'
   },
   {
     icon: Shirt,
-    image: "/lovable-uploads/cf55973a-06a7-428c-87df-83a2d04ff7f1.png",
+    image: "/lovable-uploads/upcycling-clothes.png",
     titleKey: 'school.upcycling.title',
     descriptionKey: 'school.upcycling.description',
     fullDescriptionKey: 'school.upcycling.fullDescription'
