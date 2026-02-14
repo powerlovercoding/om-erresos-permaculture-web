@@ -34,7 +34,7 @@ export const communityActivities: Activity[] = [
   },
   {
     icon: Users,
-    image: "/lovable-uploads/d08cf0e9-fa46-4503-a10c-4b32c4d8c1f7.png",
+    image: "/lovable-uploads/comunal-garden.png",
     titleKey: 'community.compost.title',
     descriptionKey: 'community.compost.description',
     fullDescriptionKey: 'community.compost.fullDescription'
@@ -44,7 +44,7 @@ export const communityActivities: Activity[] = [
 export const schoolActivities: Activity[] = [
   {
     icon: School,
-    image: "/lovable-uploads/36371c0e-678d-47af-8107-56f98cbeaeb0.png",
+    image: "/lovable-uploads/greenschool.png",
     titleKey: 'school.education.title',
     descriptionKey: 'school.education.description',
     fullDescriptionKey: 'school.education.fullDescription'
