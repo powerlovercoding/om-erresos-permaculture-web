@@ -51,14 +51,14 @@ export const schoolActivities: Activity[] = [
   },
   {
     icon: Recycle,
-    image: "/lovable-uploads/e705043f-bd94-4bc7-adbe-e330cbaf42da.png",
+    image: "/lovable-uploads/school-recycling.png",
     titleKey: 'school.garden.title',
     descriptionKey: 'school.garden.description',
     fullDescriptionKey: 'school.garden.fullDescription'
   },
   {
     icon: Droplets,
-    image: "/lovable-uploads/b2239e97-e9ca-408a-958f-62c3c16ed8a7.png",
+    image: "/lovable-uploads/hydrusa-water.png",
     titleKey: 'school.recycling.title',
     descriptionKey: 'school.recycling.description',
     fullDescriptionKey: 'school.recycling.fullDescription'
