@@ -104,7 +104,7 @@ const Header = () => {
             className="flex items-center space-x-2 md:space-x-3 flex-shrink-0"
           >
             <img 
-              src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
+              src="/uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
               alt="Om Erresos Logo" 
               style={{
                 filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))'
@@ -182,7 +182,7 @@ const Header = () => {
                   {/* Logo in mobile menu */}
                   <div className="flex items-center space-x-3 px-2 pb-4 border-b border-primary/20">
                     <img 
-                      src="/lovable-uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
+                      src="/uploads/c2986775-ecdc-4368-b744-8a1c50f5881d.png" 
                       alt="Om Erresos Logo" 
                       className="h-8 w-auto drop-shadow-lg flex-shrink-0" 
                     />

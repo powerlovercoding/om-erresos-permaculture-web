@@ -6,13 +6,13 @@ const PartnerLogos = () => {
   } = useLanguage();
   const partnerLogos = [{
     name: 'Municipality of West Lesvos',
-    logo: '/lovable-uploads/14233595-7b47-43b0-8ea8-55956df06e33.png'
+    logo: '/uploads/14233595-7b47-43b0-8ea8-55956df06e33.png'
   }, {
     name: 'Partner Organization 2',
-    logo: '/lovable-uploads/6b8345ed-d409-4218-96a0-68d8c09c750a.png'
+    logo: '/uploads/6b8345ed-d409-4218-96a0-68d8c09c750a.png'
   }, {
     name: 'Partner Organization 3',
-    logo: '/lovable-uploads/8dd8608e-2d58-443d-ac43-a2b5dd6f3ec3.png'
+    logo: '/uploads/8dd8608e-2d58-443d-ac43-a2b5dd6f3ec3.png'
   }];
   return <section className="bg-gray-50 py-16">
       <div className="container-custom section-padding">

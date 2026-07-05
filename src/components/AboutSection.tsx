@@ -96,7 +96,7 @@ const AboutSection = () => {
         }} viewport={{
           once: true
         }} className="relative">
-            <img alt="Farmer with gardening tools in a sustainable farming environment" className="w-full h-96 object-cover rounded-lg shadow-lg" src="/lovable-uploads/5f3241c6-a5e3-4826-8d58-6cfe427338b3.png" />
+            <img alt="Farmer with gardening tools in a sustainable farming environment" className="w-full h-96 object-cover rounded-lg shadow-lg" src="/uploads/5f3241c6-a5e3-4826-8d58-6cfe427338b3.png" />
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary rounded-lg opacity-20"></div>
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent rounded-full opacity-20"></div>
           </motion.div>
