@@ -3,9 +3,9 @@
 
 backend:
   name: github
-  repo: OWNER/REPO           # <-- replace with your GitHub owner/repo after connecting
+  repo: powerlovercoding/om-eressos-permaculture-web
   branch: main
-  base_url: https://YOUR-OAUTH-PROXY.onrender.com  # <-- see ADMIN_SETUP.md
+  base_url: https://eressos-oauth.onrender.com
 
 # Where uploaded images are stored in the repo, and how they resolve in the site
 media_folder: "public/uploads"
