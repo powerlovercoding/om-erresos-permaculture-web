@@ -1,5 +1,5 @@
-
 import { Users, School, Sprout, Recycle, Droplets, Zap, Shirt, Globe } from 'lucide-react';
+import images from './activityImages.json';
 
 export type Activity = {
   icon: any;
@@ -11,7 +11,7 @@ export type Activity = {
 
 export const featuredActivity: Activity = {
   icon: Globe,
-  image: "/uploads/cdaa293b-d3fd-4442-9c78-28288fa0a2d5.png",
+  image: images.featured_climate,
   titleKey: 'featured.climate.title',
   descriptionKey: 'featured.climate.description',
   fullDescriptionKey: 'featured.climate.fullDescription'
@@ -20,21 +20,21 @@ export const featuredActivity: Activity = {
 export const communityActivities: Activity[] = [
   {
     icon: Recycle,
-    image: "/uploads/beach-clean-and-art.png",
+    image: images.community_workshop,
     titleKey: 'community.workshop.title',
     descriptionKey: 'community.workshop.description',
     fullDescriptionKey: 'community.workshop.fullDescription'
   },
   {
     icon: Sprout,
-    image: "/uploads/from-plate-to-soil.png",
+    image: images.community_garden,
     titleKey: 'community.garden.title',
     descriptionKey: 'community.garden.description',
     fullDescriptionKey: 'community.garden.fullDescription'
   },
   {
     icon: Users,
-    image: "/uploads/comunal-garden.png",
+    image: images.community_compost,
     titleKey: 'community.compost.title',
     descriptionKey: 'community.compost.description',
     fullDescriptionKey: 'community.compost.fullDescription'
@@ -44,49 +44,49 @@ export const communityActivities: Activity[] = [
 export const schoolActivities: Activity[] = [
   {
     icon: School,
-    image: "/uploads/greenschool.png",
+    image: images.school_education,
     titleKey: 'school.education.title',
     descriptionKey: 'school.education.description',
     fullDescriptionKey: 'school.education.fullDescription'
   },
   {
     icon: Recycle,
-    image: "/uploads/school-recycling.png",
+    image: images.school_garden,
     titleKey: 'school.garden.title',
     descriptionKey: 'school.garden.description',
     fullDescriptionKey: 'school.garden.fullDescription'
   },
   {
     icon: Droplets,
-    image: "/uploads/hydrusa-water.png",
+    image: images.school_recycling,
     titleKey: 'school.recycling.title',
     descriptionKey: 'school.recycling.description',
     fullDescriptionKey: 'school.recycling.fullDescription'
   },
   {
     icon: Users,
-    image: "/uploads/tree-wild.png",
+    image: images.school_climate,
     titleKey: 'school.climate.title',
     descriptionKey: 'school.climate.description',
     fullDescriptionKey: 'school.climate.fullDescription'
   },
   {
     icon: Sprout,
-    image: "/uploads/green-seeds.png",
+    image: images.school_biodiversity,
     titleKey: 'school.biodiversity.title',
     descriptionKey: 'school.biodiversity.description',
     fullDescriptionKey: 'school.biodiversity.fullDescription'
   },
   {
     icon: Zap,
-    image: "/uploads/theatre-play.png",
+    image: images.school_sustainability,
     titleKey: 'school.sustainability.title',
     descriptionKey: 'school.sustainability.description',
     fullDescriptionKey: 'school.sustainability.fullDescription'
   },
   {
     icon: Shirt,
-    image: "/uploads/upcycling-clothes.png",
+    image: images.school_upcycling,
     titleKey: 'school.upcycling.title',
     descriptionKey: 'school.upcycling.description',
     fullDescriptionKey: 'school.upcycling.fullDescription'

@@ -1,0 +1,36 @@
+# Decap CMS configuration for Om Eressos
+# Docs: https://decapcms.org/docs/
+
+backend:
+  name: github
+  repo: OWNER/REPO           # <-- replace with your GitHub owner/repo after connecting
+  branch: main
+  base_url: https://YOUR-OAUTH-PROXY.onrender.com  # <-- see ADMIN_SETUP.md
+
+# Where uploaded images are stored in the repo, and how they resolve in the site
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Publish immediately on save (no editorial workflow)
+publish_mode: simple
+
+collections:
+  - name: "activity_images"
+    label: "Activity Images"
+    description: "Replace any activity card image. Upload a new photo and it will appear on the site after the build."
+    files:
+      - name: "images"
+        label: "All activity images"
+        file: "src/data/activityImages.json"
+        fields:
+          - { label: "Featured — Climate", name: "featured_climate", widget: "image" }
+          - { label: "Community — Beach clean & art", name: "community_workshop", widget: "image" }
+          - { label: "Community — From plate to soil", name: "community_garden", widget: "image" }
+          - { label: "Community — Communal garden", name: "community_compost", widget: "image" }
+          - { label: "School — Environmental education", name: "school_education", widget: "image" }
+          - { label: "School — Plastic recycling", name: "school_garden", widget: "image" }
+          - { label: "School — Water recycling & wastewater", name: "school_recycling", widget: "image" }
+          - { label: "School — Bees and pollinators", name: "school_climate", widget: "image" }
+          - { label: "School — Local varieties and seeds", name: "school_biodiversity", widget: "image" }
+          - { label: "School — Theatre workshop for teenagers", name: "school_sustainability", widget: "image" }
+          - { label: "School — Creative clothing upcycling", name: "school_upcycling", widget: "image" }
