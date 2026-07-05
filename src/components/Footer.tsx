@@ -16,7 +16,7 @@ const Footer = () => {
               <img
                 alt="Om Erresos Logo"
                 className="w-10 h-10 object-contain"
-                src="/lovable-uploads/791924a5-491b-4fb2-9044-8501763c4d45.png"
+                src="/uploads/791924a5-491b-4fb2-9044-8501763c4d45.png"
               />
               <span className="font-heading font-semibold text-xl">ERESSOS</span>
             </div>

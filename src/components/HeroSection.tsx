@@ -78,7 +78,7 @@ const HeroSection = () => {
           delay: 0.2
         }} className="relative px-2 sm:px-0">
             <div className="w-full">
-              <img alt="People working together on permaculture activities including planting and building" src="/lovable-uploads/40fcc85c-e289-44fe-9cd3-4ea553d473da.png" className="w-full h-80 sm:h-96 rounded-lg shadow-lg object-cover" />
+              <img alt="People working together on permaculture activities including planting and building" src="/uploads/40fcc85c-e289-44fe-9cd3-4ea553d473da.png" className="w-full h-80 sm:h-96 rounded-lg shadow-lg object-cover" />
             </div>
           </motion.div>
         </div>
